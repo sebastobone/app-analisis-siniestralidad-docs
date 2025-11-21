@@ -1,0 +1,67 @@
+site_name: App Análisis Siniestralidad
+site_author: Gerencia de Modelacion Tecnica
+
+repo_url: https://github.com/sebastobone/app-analisis-siniestralidad
+
+nav:
+  - Introducción: index.md
+  - Estructura: estructura.md
+  - Configuración:
+    - Archivo segmentación: config/segmentacion.md
+    - Construcción de queries: config/queries.md
+  - Uso:
+    - Ejecutar la app: uso/ejecutar_app.md
+    - Ingresar parámetros: uso/parametros.md
+    - Generar información:
+      - Extracción: uso/informacion/extraccion.md
+      - Carga manual: uso/informacion/carga_manual.md
+      - Validaciones: uso/informacion/validaciones.md
+    - Generar controles y cuadrar contablemente: uso/controles.md
+    - Preparar la plantilla: uso/preparacion_plantilla.md
+    - Analizar triángulos: uso/triangulos.md
+    - Analizar entremés: uso/entremes.md
+    - Consolidar resultados y generar informes: uso/resultados.md
+  - Actualización: actualizacion.md
+  - Diccionario: diccionario.md
+  - Cierres contables:
+    - Configuraciones: cierre/configuraciones.md
+    - Particularidades por negocio: cierre/particularidades.md
+  - Pruebas de funcionamiento: pruebas.md
+  - Preguntas y problemas frecuentes: faq.md
+  - Guía para auditores:
+    - Inicio: auditores/inicio.md
+    - Revisar triángulos: auditores/triangulos.md
+    - Revisar entremés: auditores/entremes.md
+
+theme:
+  name: material
+  palette:
+    primary: custom
+    accent: custom
+  language: es
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+
+extra_css:
+  - styles.css
+
+plugins:
+  - include-markdown
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
