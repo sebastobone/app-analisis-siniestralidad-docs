@@ -1,6 +1,6 @@
 # Aplicación para análisis de siniestralidad
 
-Click [aquí](https://sebastobone.github.io/app-analisis-siniestralidad/) para acceder a la documentación completa en línea.
+Click [aquí](https://sebastobone.github.io/app-analisis-siniestralidad-docs/) para acceder a la documentación completa en línea.
 
 <!--docs-intro-start-->
 
