@@ -24,7 +24,7 @@ nav:
       - Analizar entremés: uso/plantilla/entremes.md
       - Cargar resultados: uso/plantilla/cargar.md
     - Consolidar resultados y generar informes: uso/resultados.md
-  - Actualización: actualizacion.md
+  - Versionamiento: versionamiento.md
   - Diccionario: diccionario.md
   - Cierres contables:
     - Configuraciones: cierre/configuraciones.md
