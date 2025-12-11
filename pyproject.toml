@@ -8,6 +8,7 @@ dependencies = [
     "mkdocs>=1.6.1",
     "mkdocs-include-markdown-plugin>=7.2.0",
     "mkdocs-material>=9.7.0",
-    "pip-audit>=2.9.0",
+    "pip-audit==2.10.0",
     "prek>=0.2.18",
+    "urllib3==2.6.0",
 ]
