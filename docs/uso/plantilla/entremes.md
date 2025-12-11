@@ -18,6 +18,33 @@ El análisis distingue entre dos tipos de ocurrencias:
     - Las **ocurrencias anteriores** incluyen todos los trimestres hasta **202503** (inclusive).
     - Las **ocurrencias actuales** abarcan los meses **202504** y **202505**, que forman parte del trimestre en curso.
 
+## Botones
+
+En la hoja de análisis, verá la siguiente interfaz:
+
+![Botones entremés](assets/plantilla/botones_entremes.png)
+
+### Guardar
+
+Guarda en el servidor todas las fórmulas de la hoja comenzando desde la columna **porcentaje_desarrollo_pago_bruto**.
+
+### Traer
+
+1. Prepara plantilla para actualizar los datos de las hojas **Resumen**, **Atípicos**, y **Entremés**.
+2. Se pegan las fórmulas previamente guardadas para la hoja, comenzando desde la columna **porcentaje_desarrollo_pago_bruto**.
+
+!!! tip
+    Esta funcionalidad es útil para actualizar las cifras reales conservando los mismos criterios actuariales de estimación.
+
+## Generar la hoja de análisis
+
+1. Seleccione en los segmentadores los análisis del mes anterior cuyos ultimates servirán como **referencia actuarial** y **referencia contable**.
+
+    !!! example "Ejemplo"
+        Si al corte anterior se calcularon triángulos pero el ultimate contabilizado se basó en entremés, se puede tomar de referencia actuarial los triángulos y de referencia contable el entremés.
+
+2. Presione el botón **Generar hoja**.
+
 ## Estructura de la hoja de Entremés
 
 ![Hoja entremés](../assets/plantilla/entremes.png)
@@ -30,16 +57,7 @@ Contiene la misma información que la hoja **Resumen**: pagos, incurridos, conte
 
 ### Ultimates anteriores
 
-Incluye la frecuencia, severidad y siniestralidad última (actuarial y contable) del periodo anterior.
-
-El origen de estas cifras depende de la referencia seleccionada en la sección **"Referencias entremés"** de la interfaz:
-
-![Referencias entremés](../assets/frontend/referencias_entremes.png)
-
-Puede elegirse de manera independiente para el **ultimate actuarial** y para el **contable**.
-
-!!! example "Ejemplo"
-    Si al corte anterior se calcularon triángulos pero el ultimate contabilizado se basó en entremés, se puede tomar de referencia actuarial los triángulos y de referencia contable el entremés.
+Incluye la frecuencia, severidad y siniestralidad última (actuarial y contable) del periodo anterior. El origen de estas cifras depende de las referencias seleccionada en los segmentadores.
 
 ### Metodologías de estimación
 
@@ -111,15 +129,5 @@ Una vez estimada la siniestralidad última:
 
 Los ultimates de la hoja **Resumen** están vinculados a los de la hoja **Entremés**. Puede guardar las fórmulas y criterios utilizados en el entremés para conservarlos en caso de que la información real se actualice.
 
-- Para guardar los parámetros actuales, presione **Guardar fórmulas entremés**.
-- Para recuperar dichos parámetros posteriormente, presione **Traer fórmulas entremés**.
-
-## Análisis adicionales
-
-Si desea realizar cálculos adicionales:
-
-1. Copie la información desde la hoja **Resumen** o desde el archivo :material-file: `output/resultados.xlsx` a un nuevo archivo independiente.
-2. Guarde el nuevo archivo en la carpeta :material-folder: `plantillas`.
-
-!!! info
-    Este archivo no será afectado por los procesos de la aplicación, por lo que puede modificarlo libremente sin riesgo de sobrescritura.
+- Para guardar los parámetros actuales, presione **Guardar**.
+- Para recuperar dichos parámetros posteriormente, presione **Traer**.

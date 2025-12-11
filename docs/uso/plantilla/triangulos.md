@@ -7,16 +7,67 @@ Existen dos caminos para estimar por triángulos:
 
 El proceso se mostrará con **Plata**, pero es análogo para frecuencia y severidad. Recuerde: la estimación se realiza **apertura por apertura**.
 
-## Generar la hoja de análisis
+## Botones
 
-![Preparación triángulos.](../assets/frontend/plantilla.png)
+En la hoja de análisis, verá la siguiente interfaz:
 
-1. Seleccione en las listas desplegables la **apertura** y el **atributo**.
-2. Seleccione la plantilla **"Plata"**.
-3. Presione el botón **Generar**.
+![Botones triángulos](assets/plantilla/botones_triangulos.png)
+
+### Generar hoja
+
+Crea la estructura del análisis para la apertura/atributo seleccionados.
+
+### Cambiar apertura
+
+Actualiza los datos del triángulo al inicio de la plantilla según la apertura/atributo seleccionados, sin modificar el resto de la estructura de la hoja.
+
+### Guardar estimación
+
+Almacena todos los parámetros definidos en la plantilla para la apertura y el atributo seleccionados. Esto incluye:
+
+- Triángulo de exclusiones.
+- Ventanas de factores de desarrollo.
+- Tipo de factor seleccionado (promedio, mediana, promedio ponderado, etc.).
+- Vector de factores seleccionados.
+
+Además, en los casos de Frecuencia, Severidad y Plata, también se guardan:
+
+- Tipo de metodología (pago o incurrido).
+- Vector de ultimate (valores y fórmulas).
+- Metodología por ocurrencia (Chain-Ladder, Bornhuetter-Ferguson o Indicador).
+- Triángulo de factores de desarrollo (por si se decide modificar los factores de una o varias ocurrencias).
+- Vector de indicador (relevante solo para metodologías Bornhuetter-Ferguson e Indicador).
+- Columna de comentarios.
+
+En el caso de Severidad, si se usa una metodología de indexación se guarda también el triángulo del vector de indexación.
+
+!!! warning "Advertencia"
+    La única persona con permiso para realizar esta acción es el **creador de la plantilla**.
+
+### Cambiar apertura y traer estimación
+
+Carga en la plantilla los parámetros almacenados previamente para la apertura y el atributo seleccionados. Es el inverso de la función **Guardar estimación**.
+
+### Guardar varias aperturas
+
+Ejecuta la función **"Guardar estimación"** para todas las aperturas y atributos seleccionados.
+
+### Traer y guardar varias aperturas
+
+1. Prepara plantilla para actualizar los datos de las hojas **Resumen**, **Atípicos**, y **Entremés**.
+2. Se ejecutan las funciones **"Cambiar apertura y traer estimación"** y **"Guardar estimación"** para todas las aperturas y atributos seleccionados.
 
 !!! tip
-    Si le sale un error de OneDrive/SharePoint al presionar **Generar**, consulte la solución en la [guía de problemas frecuentes](../faq.md#2-error-de-onedrivesharepoint).
+    Esta funcionalidad es útil para actualizar las cifras reales conservando los mismos criterios actuariales de estimación.
+
+### Ajustar gráfica factores
+
+Corrige los ejes cuando cambian periodos o alturas de la gráfica.
+
+## Generar la hoja de análisis
+
+1. Seleccione en el segmentador de datos la **apertura** y el **atributo** deseados.
+2. Presione el botón **Generar hoja**.
 
 ## Estructura de la hoja de análisis
 
@@ -53,7 +104,7 @@ Esta gráfica es dinámica: se actualiza automáticamente al modificar cualquier
 - Altura
 
 !!! tip
-    Si la gráfica se descuadra al cambiar parámetros, utilice el botón **Ajustar límite gráfica factores**.
+    Si la gráfica se descuadra al cambiar parámetros, utilice el botón **Ajustar gráfica factores**.
 
 ### Exclusiones
 
@@ -120,7 +171,7 @@ Muestra una comparación de pago, incurrido, y ultimate para cada periodo de ocu
 
 ## Pasos finales
 
-1. Presione **Guardar**. La siguiente información será almacenada en la carpeta :material-folder: `data/db`:
+1. Presione **Guardar estimación**. La siguiente información será almacenada en el servidor:
 
     - Triángulo de exclusiones.
     - Ventanas de tiempo para estadísticos.
@@ -134,24 +185,12 @@ Muestra una comparación de pago, incurrido, y ultimate para cada periodo de ocu
 
 2. Para analizar una nueva apertura:
 
-    - **Desde cero**: seleccione la apertura en la lista desplegable y presione **Generar**. Esto cargará la configuración por defecto.
-    - **Manteniendo los parámetros y criterios actuales**: seleccione la apertura en la lista desplegable y presione **Actualizar**. Esto conserva la configuración vigente como punto de partida.
-
-Si ha finalizado todos los análisis y validaciones y desea consolidar la información final, presione el botón **Almacenar análisis**.
+    - **Desde cero**: seleccione la apertura en la lista desplegable y presione **Generar hoja**. Esto cargará la configuración por defecto.
+    - **Manteniendo los parámetros y criterios actuales**: seleccione la apertura en la lista desplegable y presione **Cambiar apertura**. Esto conserva la configuración vigente como punto de partida.
 
 ## Modificar un análisis ya guardado
 
-1. Seleccione la apertura y el atributo correspondientes desde las listas desplegables.
-2. Presione **Traer** para cargar los datos almacenados.
+1. Seleccione la apertura y el atributo correspondientes desde el segmentador.
+2. Presione **Cambiar apertura y traer estimación** para cargar los datos almacenados.
 3. Haga las modificaciones necesarias.
-4. Presione **Guardar** para actualizar los resultados almacenados.
-
-## Análisis adicionales
-
-Si desea realizar cálculos adicionales:
-
-1. Copie la información desde la hoja **Resumen** o desde el archivo :material-file: `output/resultados.xlsx` a un nuevo archivo independiente.
-2. Guarde el nuevo archivo en la carpeta :material-folder: `plantillas`.
-
-!!! info
-    Este archivo no será afectado por los procesos de la aplicación, por lo que puede modificarlo libremente sin riesgo de sobrescritura.
+4. Presione **Guardar estimación** para actualizar los resultados almacenados.

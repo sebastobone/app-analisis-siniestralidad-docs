@@ -16,9 +16,13 @@ nav:
       - Carga manual: uso/informacion/carga_manual.md
       - Validaciones: uso/informacion/validaciones.md
     - Generar controles y cuadrar contablemente: uso/controles.md
-    - Preparar la plantilla: uso/preparacion_plantilla.md
-    - Analizar triángulos: uso/triangulos.md
-    - Analizar entremés: uso/entremes.md
+    - Plantillas:
+      - Consolidación de información: uso/plantilla/consolidacion.md
+      - Crear una plantilla: uso/plantilla/crear.md
+      - Estructura de la plantilla: uso/plantilla/estructura.md
+      - Analizar triángulos: uso/plantilla/triangulos.md
+      - Analizar entremés: uso/plantilla/entremes.md
+      - Cargar resultados: uso/plantilla/cargar.md
     - Consolidar resultados y generar informes: uso/resultados.md
   - Actualización: actualizacion.md
   - Diccionario: diccionario.md
