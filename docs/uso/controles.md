@@ -79,6 +79,10 @@ Para Teradata, la comparación se hace al nivel más detallado: **apertura + per
 !!! note "Nota"
     Esta evidencia solamente se genera para los análisis que corresponden a cierres contables.
 
+### Consistencia entre información de entrada y la información que viaja a las plantillas
+
+La generación de una evidencia de consistencia entre los datos de entrada consolidados y los enviados a las plantillas Excel.
+
 ### Evidencias de extracción
 
 El sistema guarda dos evidencias del momento de extracción:
