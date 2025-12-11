@@ -22,7 +22,7 @@ El análisis distingue entre dos tipos de ocurrencias:
 
 En la hoja de análisis, verá la siguiente interfaz:
 
-![Botones entremés](assets/plantilla/botones_entremes.png)
+![Botones entremés](../assets/plantilla/botones_entremes.png)
 
 ### Guardar
 

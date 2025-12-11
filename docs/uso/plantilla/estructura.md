@@ -9,7 +9,7 @@
 - **Histórico**: Igual que la hoja resumen, pero con información de análisis anteriores. Presenta una columna que indica el mes del cierre correspondiente (*mes_corte*) y el tipo de análisis (si fue triángulos o entremés). Contiene información de siniestros típicos y atípicos.
 
 !!! note "Nota"
-    Estas hojas se generan automáticamente al preparar la plantilla. Las periodicidades de las aperturas corresponden a las especificadas en el [archivo de segmentación](../config/segmentacion.md#propiedades-de-cada-apertura).
+    Estas hojas se generan automáticamente al preparar la plantilla. Las periodicidades de las aperturas corresponden a las especificadas en el [archivo de segmentación](../../config/segmentacion.md#propiedades-de-cada-apertura).
 
 ## Hojas para análisis de triángulos
 

@@ -18,18 +18,8 @@ A partir de un **negocio ficticio** con datos simulados, se valida que:
 - Las **alertas y errores de extracción de información** se generen de manera correcta y consistente.
 - Las **alertas y errores de carga de información** se generen de manera correcta y consistente.
 - Las **validaciones del archivo de segmentación** funcionen según lo esperado.
-- Las cifras **reales y estimadas** se mantengan consistentes entre todos los archivos y rutas relevantes:
-    - :material-folder: `data/raw`
-    - :material-folder: `data/carga_manual`
-    - :material-folder: `data/pre_cuadre_contable`
-    - :material-folder: `data/post_cuadre_contable`
-    - :material-folder: `data/consolidado`
-    - :material-folder: `data/processed`
-    - :material-folder: `plantillas`
-    - :material-folder: `output/resultados`
-    - :material-file: `output/resultados.xlsx`
-    - :material-file: `output/informe_ar.xlsx`
-- Todas las funciones de la plantilla ejecuten exactamente los comportamientos descritos en la [documentación](uso/preparacion_plantilla.md#funciones-de-la-plantilla).
+- Las cifras **reales y estimadas** se mantengan consistentes entre todos los archivos, procesos y rutas relevantes.
+- Todas las funciones de la plantilla ejecuten exactamente los comportamientos descritos en esta documentación.
 
 ### Pruebas por negocio
 

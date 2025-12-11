@@ -11,7 +11,7 @@ El proceso se mostrará con **Plata**, pero es análogo para frecuencia y severi
 
 En la hoja de análisis, verá la siguiente interfaz:
 
-![Botones triángulos](assets/plantilla/botones_triangulos.png)
+![Botones triángulos](../assets/plantilla/botones_triangulos.png)
 
 ### Generar hoja
 

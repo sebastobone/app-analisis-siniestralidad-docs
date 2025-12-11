@@ -35,7 +35,7 @@ El sistema revisa:
 
 5. **Fechas fuera de rango**
 
-    - Si hay registros **anteriores al Mes de primera ocurrencia** (definido en [parámetros](../parametros.md)), se agrupan en ese primer mes.
+    - Si hay registros **anteriores al Mes de primera ocurrencia** (definido al crear el análisis [](../crear_analisis.md)), se agrupan en ese primer mes.
     - Si hay registros **posteriores al Mes de corte**, se eliminan.
 
 !!! warning "Advertencia"
