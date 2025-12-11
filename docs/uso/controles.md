@@ -1,6 +1,6 @@
 # Generar controles de información y cuadrar contablemente
 
-Después de la sección **"Carga manual de información"**, verá la siguiente sección:
+En la página de análisis encontrará la siguiente sección:
 
 ![Controles](../assets/frontend/controles.png)
 
@@ -48,24 +48,12 @@ En la parte inferior, bajo los títulos **Archivos para incluir en controles y c
 !!! note "Nota"
     En el cuadre de siniestros, **toda la diferencia se asigna a la fecha de ocurrencia más reciente** dentro de cada fecha de registro.
 
-### Almacenamiento de archivos
-
-Los archivos quedan almacenados en:
-
-- Datos originales → :material-folder: `data/pre_cuadre_contable`
-- Datos cuadrados → :material-folder: `data/post_cuadre_contable`
-
 ## Controles de información
 
 Si activa el cuadre contable, los controles se ejecutan **dos veces**:
 
 1. Con la información **antes del cuadre**.
 2. Con la información **después del cuadre**.
-
-Los resultados se guardan en:
-
-1. Pre-cuadre → :material-folder: `data/controles_informacion/pre_cuadre_contable`
-2. Post-cuadre → :material-folder: `data/controles_informacion/post_cuadre_contable`
 
 ### Comparación entre las cifras de Teradata y SAP
 
@@ -88,12 +76,12 @@ Para Teradata, la comparación se hace al nivel más detallado: **apertura + per
 
 ![Validación de consistencia histórica.](assets/controles/tera_vs_sap.png)
 
-!!! warning "Alerta"
-    Para sacar el máximo provecho, asegúrese de guardar en :material-folder: `data/controles_informacion` los controles generados en procesos anteriores.
+!!! note "Nota"
+    Esta evidencia solamente se genera para los análisis que corresponden a cierres contables.
 
 ### Evidencias de extracción
 
-En la carpeta :material-folder: `controles_informacion`, el sistema guarda dos evidencias:
+El sistema guarda dos evidencias del momento de extracción:
 
 1. **El archivo de segmentación utilizado**, con una hoja extra que incluye la fecha y hora de generación de controles.
 
