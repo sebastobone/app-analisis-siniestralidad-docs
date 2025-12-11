@@ -18,27 +18,13 @@ Esta aplicación permite realizar **análisis de siniestralidad última** median
 
 ## Requisitos
 
-- **[Git](https://git-scm.com/):** para descargar y actualizar la aplicación*.
-- **[uv](https://docs.astral.sh/uv/getting-started/installation/):** para la gestión de librerías*.
 - **Microsoft Excel:** para crear las plantillas y realizar los análisis.
 - **Acceso a Teradata:** necesario si se desea extraer información directamente de esta fuente.
 
-*_Git y uv no requieren permisos de administrador para ser instalados._
+## Ingresar a la app
 
-## Descargar la app
+1. Diríjase a la [página web de la aplicación](https://predeterminate-bandoliered-gino.ngrok-free.dev/).
 
-1. Elija una **carpeta de trabajo** donde quiera guardar los análisis. Haga clic derecho sobre ella y seleccione **Abrir en Terminal**:
+2. Ingrese su usuario y contraseña. En caso de no tenerlos, contacte al administrador.
 
-    ![Abrir terminal](docs/assets/abrir_terminal.png)
-
-2. En la terminal, copie y ejecute el siguiente comando:
-
-    ```sh
-    git clone https://github.com/sebastobone/app-analisis-siniestralidad.git
-    ```
-
-    Se descargará una nueva carpeta llamada `app-analisis-siniestralidad`, que es la **carpeta de la aplicación**.
-
-3. Cierre la terminal.
-
-¡Eso es todo! Consulte ahora la [guía de configuración de análisis](https://sebastobone.github.io/app-analisis-siniestralidad/config/segmentacion/) y la [guía de uso de la app](https://sebastobone.github.io/app-analisis-siniestralidad/uso/ejecutar_app/).
+¡Eso es todo! Consulte ahora la [guía de configuración de análisis](https://sebastobone.github.io/app-analisis-siniestralidad-docs/config/segmentacion/) y la [guía de uso de la app](https://sebastobone.github.io/app-analisis-siniestralidad-docs/uso/ejecutar_app/).
