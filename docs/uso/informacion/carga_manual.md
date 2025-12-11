@@ -1,6 +1,6 @@
 # Carga manual de información
 
-Cuando presione **"Guardar parámetros"**, aparecerá la sección **"Carga manual de información"**:
+En la página de análisis encontrará la sección **"Carga manual de información"**:
 
 ![Extraccion](../../assets/frontend/carga_manual.png)
 
@@ -8,7 +8,7 @@ Aquí puede cargar manualmente información de **siniestros, primas, y expuestos
 
 ## Pasos
 
-1. Presione el botón **"Descargar ejemplos"**.
+1. **(Opcional)** Presione el botón **"Descargar ejemplos"**.
 
     - Se descargará una carpeta comprimida con ejemplos de cada archivo.
     - Úselos como referencia para construir la información que desea cargar.

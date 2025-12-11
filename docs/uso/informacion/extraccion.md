@@ -1,18 +1,14 @@
 # Extracción de información
 
-Cuando presione **"Guardar parámetros"**, aparecerá la sección **"Extracción de información"**:
+En la página de análisis encontrará la sección **"Extracción de información"**:
 
 ![Extraccion](../../assets/frontend/extraccion.png)
 
 ## Pasos
 
-1. Verifique que esté conectado a la **VPN o red +SURA**.
-2. **(Opcional)** Cargue las consultas que construyó según la [guía de construcción de consultas](../../config/queries.md).
-
-    - Si no carga ninguna consulta, se usarán las más recientes que haya cargado, almacenadas en :material-folder: `data/queries/{negocio}`.
-    - Si nunca ha cargado, se usarán las consultas por defecto de la [configuración del cierre contable](../../cierre/configuraciones.md).
-
-3. Ingrese su usuario y contraseña de Teradata.
+1. Cargue las consultas que construyó según la [guía de construcción de consultas](../../config/queries.md).
+2. Ingrese su usuario y contraseña de Teradata.
+3. Verifique que esté conectado a la **VPN o red +SURA**.
 4. Ejecute los queries.
 
     !!! tip
@@ -35,5 +31,3 @@ Si sus consultas utilizan **tablas de segmentación** definidas en el [archivo d
 ## Validaciones sobre salidas
 
 El resultado de cada consulta se somete a las [validaciones comunes](validaciones.md) sobre insumos de siniestros, primas, y expuestos.
-
-Los datos extraídos de Teradata se almacenan en :material-folder: `data/raw`.

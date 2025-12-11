@@ -20,7 +20,7 @@ El sistema revisa:
 
     - El archivo a cargar sólo puede incluir las aperturas definidas en el [archivo de segmentación](../../config/segmentacion.md).
     - Si tiene alguna apertura extra que no está en ese archivo → **error**.
-    - No es necesario que el archivo a cargar contenga todas las aperturas definidas.
+    - Si le falta alguna apertura que sí está en ese archivo → **error**.
 
 3. **Valores nulos**
 
@@ -38,14 +38,7 @@ El sistema revisa:
     - Si hay registros **anteriores al Mes de primera ocurrencia** (definido en [parámetros](../parametros.md)), se agrupan en ese primer mes.
     - Si hay registros **posteriores al Mes de corte**, se eliminan.
 
-## Almacenamiento final
-
-Después de pasar las validaciones, cada archivo se guarda en la [carpeta correspondiente](../../estructura.md) en dos formatos:
-
-- `.parquet`: usado internamente por la aplicación.
-- `.csv`: disponible para explorar los datos con herramientas externas.
-
-!!! note "Nota"
+!!! warning "Advertencia"
     Al guardar los archivos, el sistema elimina automáticamente cualquier columna que **no sea**:
 
     - Una **columna mínima requerida**.
