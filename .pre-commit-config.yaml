@@ -19,7 +19,7 @@ repos:
 
       - id: mkdocs-strict
         name: mkdocs => strict internal link check
-        stages: [pre-commit]
+        stages: [pre-push]
         language: system
         entry: uv run mkdocs build --strict
         always_run: true
