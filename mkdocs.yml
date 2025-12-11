@@ -5,7 +5,6 @@ repo_url: https://github.com/sebastobone/app-analisis-siniestralidad
 
 nav:
   - Introducción: index.md
-  - Estructura: estructura.md
   - Configuración:
     - Archivo segmentación: config/segmentacion.md
     - Construcción de queries: config/queries.md
@@ -25,6 +24,7 @@ nav:
       - Cargar resultados: uso/plantilla/cargar.md
     - Consolidar resultados y generar informes: uso/resultados.md
     - Cargar archivos adicionales: uso/archivos_adicionales.md
+    - Descargar archivos: uso/descargar.md
   - Versionamiento: versionamiento.md
   - Diccionario: diccionario.md
   - Cierres contables:
