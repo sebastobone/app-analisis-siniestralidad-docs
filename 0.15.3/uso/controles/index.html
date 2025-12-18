@@ -10,11 +10,13 @@
         <meta name="author" content="Gerencia de Modelacion Tecnica">
       
       
+        <link rel="canonical" href="https://sebastobone.github.io/app-analisis-siniestralidad-docs/0.15.3/uso/controles/">
+      
       
         <link rel="prev" href="../informacion/validaciones/">
       
       
-        <link rel="next" href="../preparacion_plantilla/">
+        <link rel="next" href="../plantilla/consolidacion/">
       
       
         
@@ -84,6 +86,10 @@
     <div data-md-component="announce">
       
     </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
     
     
       
@@ -218,33 +224,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../estructura/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Estructura
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -254,10 +233,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -275,8 +254,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -366,10 +345,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -387,8 +366,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -405,42 +384,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ejecutar_app/" class="md-nav__link">
+      <a href="../crear_analisis/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ejecutar la app
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../parametros/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ingresar parámetros
+    Crear un análisis
   
 
     
@@ -469,10 +420,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   
@@ -490,8 +441,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -710,17 +661,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#almacenamiento-de-archivos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Almacenamiento de archivos
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -778,6 +718,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#consistencia-entre-informacion-de-entrada-y-la-informacion-que-viaja-a-las-plantillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consistencia entre información de entrada y la información que viaja a las plantillas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#evidencias-de-extraccion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -808,15 +759,62 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plantillas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plantillas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../preparacion_plantilla/" class="md-nav__link">
+      <a href="../plantilla/consolidacion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Preparar la plantilla
+    Consolidación de información
   
 
     
@@ -837,7 +835,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../triangulos/" class="md-nav__link">
+      <a href="../plantilla/crear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crear una plantilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plantilla/estructura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura de la plantilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plantilla/triangulos/" class="md-nav__link">
         
   
   
@@ -865,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entremes/" class="md-nav__link">
+      <a href="../plantilla/entremes/" class="md-nav__link">
         
   
   
@@ -881,6 +935,42 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plantilla/cargar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargar resultados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -914,6 +1004,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos_adicionales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargar archivos adicionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../descargar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descargar archivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -928,14 +1074,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../actualizacion/" class="md-nav__link">
+      <a href="../../versionamiento/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Actualización
+    Versionamiento
   
 
     
@@ -990,10 +1136,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -1011,8 +1157,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1118,33 +1264,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Preguntas y problemas frecuentes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -1154,10 +1273,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1175,8 +1294,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1354,17 +1473,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#almacenamiento-de-archivos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Almacenamiento de archivos
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1422,6 +1530,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#consistencia-entre-informacion-de-entrada-y-la-informacion-que-viaja-a-las-plantillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consistencia entre información de entrada y la información que viaja a las plantillas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#evidencias-de-extraccion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1458,8 +1577,8 @@
 
 
 <h1 id="generar-controles-de-informacion-y-cuadrar-contablemente">Generar controles de información y cuadrar contablemente</h1>
-<p>Después de la sección <strong>"Carga manual de información"</strong>, verá la siguiente sección:</p>
-<p><img alt="Controles" src="../../assets/frontend/controles.png" /></p>
+<p>En la página de análisis encontrará la siguiente sección:</p>
+<p><img alt="Controles" src="../../assets/controles.png" /></p>
 <h2 id="los-archivos-afos">Los archivos AFOs</h2>
 <p>Los "AFOs" son archivos de Excel que, mediante el complemento <strong>Analysis For Office (AFO)</strong>, muestran las cifras contables de cada mes para:</p>
 <ul>
@@ -1500,22 +1619,11 @@
 <p class="admonition-title">Nota</p>
 <p>En el cuadre de siniestros, <strong>toda la diferencia se asigna a la fecha de ocurrencia más reciente</strong> dentro de cada fecha de registro.</p>
 </div>
-<h3 id="almacenamiento-de-archivos">Almacenamiento de archivos</h3>
-<p>Los archivos quedan almacenados en:</p>
-<ul>
-<li>Datos originales → <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> <code>data/pre_cuadre_contable</code></li>
-<li>Datos cuadrados → <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> <code>data/post_cuadre_contable</code></li>
-</ul>
 <h2 id="controles-de-informacion">Controles de información</h2>
 <p>Si activa el cuadre contable, los controles se ejecutan <strong>dos veces</strong>:</p>
 <ol>
 <li>Con la información <strong>antes del cuadre</strong>.</li>
 <li>Con la información <strong>después del cuadre</strong>.</li>
-</ol>
-<p>Los resultados se guardan en:</p>
-<ol>
-<li>Pre-cuadre → <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> <code>data/controles_informacion/pre_cuadre_contable</code></li>
-<li>Post-cuadre → <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> <code>data/controles_informacion/post_cuadre_contable</code></li>
 </ol>
 <h3 id="comparacion-entre-las-cifras-de-teradata-y-sap">Comparación entre las cifras de Teradata y SAP</h3>
 <p>Esta comparación solamente se realiza para <strong>primas y siniestros</strong>. Se compara cada cantidad en cada periodo contable a nivel de <strong>ramo-compañía</strong> (apertura máxima disponible desde SAP). La diferencia se calcula en valor absoluto y en porcentaje, tomando SAP como referencia.</p>
@@ -1530,12 +1638,14 @@
 <p>El sistema compara la extracción actual contra la del <strong>mes anterior</strong>, tanto para Teradata como para SAP.</p>
 <p>Para Teradata, la comparación se hace al nivel más detallado: <strong>apertura + periodo de ocurrencia + periodo de movimiento</strong>. Esto permite identificar variaciones de montos totales y cambios en fechas de ocurrencia o movimiento.</p>
 <p><img alt="Validación de consistencia histórica." src="../assets/controles/tera_vs_sap.png" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Alerta</p>
-<p>Para sacar el máximo provecho, asegúrese de guardar en <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> <code>data/controles_informacion</code> los controles generados en procesos anteriores.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Esta evidencia solamente se genera para los análisis que corresponden a cierres contables.</p>
 </div>
+<h3 id="consistencia-entre-informacion-de-entrada-y-la-informacion-que-viaja-a-las-plantillas">Consistencia entre información de entrada y la información que viaja a las plantillas</h3>
+<p>La generación de una evidencia de consistencia entre los datos de entrada consolidados y los enviados a las plantillas Excel.</p>
 <h3 id="evidencias-de-extraccion">Evidencias de extracción</h3>
-<p>En la carpeta <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> <code>controles_informacion</code>, el sistema guarda dos evidencias:</p>
+<p>El sistema guarda dos evidencias del momento de extracción:</p>
 <ol>
 <li>
 <p><strong>El archivo de segmentación utilizado</strong>, con una hoja extra que incluye la fecha y hora de generación de controles.</p>
@@ -1597,7 +1707,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
