@@ -10,5 +10,4 @@ dependencies = [
     "mkdocs-material>=9.7.0",
     "pip-audit==2.10.0",
     "prek>=0.2.18",
-    "urllib3==2.6.0",
 ]
