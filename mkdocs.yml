@@ -2,6 +2,7 @@ site_name: App Análisis Siniestralidad
 site_author: Gerencia de Modelacion Tecnica
 
 repo_url: https://github.com/sebastobone/app-analisis-siniestralidad
+site_url: https://sebastobone.github.io/app-analisis-siniestralidad-docs/
 
 nav:
   - Introducción: index.md
@@ -68,3 +69,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - admonition
   - pymdownx.details
+
+extra:
+  version:
+    provider: mike
