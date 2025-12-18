@@ -20,7 +20,7 @@ Depués de ingresar a la aplicación, baje a la sección **Retomar análisis** y
 
 En la interfaz web, diríjase a la sección **“Plantilla”**.
 
-![Preparación triángulos.](../assets/frontend/plantilla.png)
+![Preparación triángulos.](../assets/plantilla.png)
 
 Presione el botón ⬇️. Se descargará en su computador una copia del libro de Excel donde el negocio realizó sus estimaciones. A partir de aquí, podrá acceder a los criterios de estimación empleados.
 

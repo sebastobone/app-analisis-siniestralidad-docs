@@ -2,7 +2,7 @@
 
 En la página de análisis encontrará la sección **"Extracción de información"**:
 
-![Extraccion](../../assets/frontend/extraccion.png)
+![Extraccion](../../assets/extraccion.png)
 
 ## Pasos
 

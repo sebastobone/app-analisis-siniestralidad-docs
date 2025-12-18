@@ -2,7 +2,7 @@
 
 Después de la sección **"Plantilla"**, verá la siguiente sección:
 
-![Sección resultados](../assets/frontend/resultados.png)
+![Sección resultados](../assets/resultados.png)
 
 ## Consolidación de resultados
 

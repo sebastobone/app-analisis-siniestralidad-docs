@@ -2,7 +2,7 @@
 
 En la interfaz web, verá la siguiente sección:
 
-![Ingreso de parametros](../assets/frontend/crear_analisis.png)
+![Ingreso de parametros](../assets/crear_analisis.png)
 
 ## Pasos
 

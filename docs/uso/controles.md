@@ -2,7 +2,7 @@
 
 En la página de análisis encontrará la siguiente sección:
 
-![Controles](../assets/frontend/controles.png)
+![Controles](../assets/controles.png)
 
 ## Los archivos AFOs
 

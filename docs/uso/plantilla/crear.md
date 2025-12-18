@@ -4,7 +4,7 @@
 
 Después de la sección **"Controles y cuadre de información"**, verá la siguiente sección:
 
-![Sección plantilla](../../assets/frontend/plantilla.png)
+![Sección plantilla](../../assets/plantilla.png)
 
 1. Ingrese el nombre de la plantilla.
 2. Presione el botón **"Crear plantilla"**.

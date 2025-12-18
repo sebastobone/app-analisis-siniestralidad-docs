@@ -2,7 +2,7 @@
 
 En la página de análisis encontrará la sección **"Carga manual de información"**:
 
-![Extraccion](../../assets/frontend/carga_manual.png)
+![Extraccion](../../assets/carga_manual.png)
 
 Aquí puede cargar manualmente información de **siniestros, primas, y expuestos**.
 
