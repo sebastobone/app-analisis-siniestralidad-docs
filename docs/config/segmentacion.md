@@ -38,7 +38,30 @@ En el archivo de segmentación, cree las siguientes hojas con sus respectivas ta
 
 En **Apertura_Siniestros**, para cada apertura se debe definir:
 
-1. **Periodicidad de ocurrencia**: Granularidad del triángulo y del entremés. Valores disponibles: Mensual, Trimestral, Semestral, o Anual.
+1. **Periodicidad de ocurrencia**: Granularidad del triángulo y del entremés. Valores disponibles:
+
+    - Mensual
+    - Trimestral
+    - Trimestral (Feb - Abr | May - Jul | Ago - Oct | Nov - Ene)
+    - Trimestral (Mar - May | Jun - Ago | Sep - Nov | Dic - Feb)
+    - Semestral
+    - Semestral (Feb - Jul | Ago - Ene)
+    - Semestral (Mar - Ago | Sep - Feb)
+    - Semestral (Abr - Sep | Oct - Mar)
+    - Semestral (May - Oct | Nov - Abr)
+    - Semestral (Jun - Nov | Dic - May)
+    - Anual
+    - Anual (Feb - Ene)
+    - Anual (Mar - Feb)
+    - Anual (Abr - Mar)
+    - Anual (May - Abr)
+    - Anual (Jun - May)
+    - Anual (Jul - Jun)
+    - Anual (Ago - Jul)
+    - Anual (Sep - Ago)
+    - Anual (Oct - Sep)
+    - Anual (Nov - Oct)
+    - Anual (Dic - Nov)
 
 2. **Tipo de indexación de la severidad**: Metodología de indexación que se utilizará para calcular la severidad. Puede tomar tres valores: Ninguna, Por fecha de ocurrencia, o Por fecha de movimiento
 
