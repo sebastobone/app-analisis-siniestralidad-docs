@@ -78,7 +78,9 @@ Para Teradata, la comparación se hace al nivel más detallado: **apertura + per
 
 ### Consistencia entre información de entrada y la información que viaja a las plantillas
 
-La generación de una evidencia de consistencia entre los datos de entrada consolidados y los enviados a las plantillas Excel.
+El sistema compara la información de [los archivos finales de siniestros, primas, y expuestos](plantilla/consolidacion.md#consolidación-de-información) con la información final que viaja a la plantilla.
+
+![Validación de consistencia plantilla.](assets/controles/consistencia_plantilla.png)
 
 ### Evidencias de extracción
 
