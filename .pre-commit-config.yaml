@@ -13,7 +13,7 @@ repos:
         name: markdownlint => markdown formatting
         stages: [pre-commit]
         language: system
-        entry: markdownlint --fix docs --disable MD013
+        entry: uv run markdownlint --fix docs --disable MD013
         always_run: true
         pass_filenames: false
 

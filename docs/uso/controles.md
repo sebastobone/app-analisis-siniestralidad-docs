@@ -31,7 +31,7 @@ En la pantalla verá dos casillas de verificación (_checkboxes_) para indicar s
 
 En la parte inferior, bajo los títulos **Archivos para incluir en controles y cuadre de siniestros, primas, y expuestos**, debe seleccionar qué archivos (ya sea de extracción o carga manual) se compararán contra SAP.
 
-- El sistema calcula las diferencias a nivel de ramo-compañía y las reparte en las aperturas definidas en las hojas **Cuadre_Siniestros** y **Cuadre_Primas** del [archivo de segmentación](../config/segmentacion.md#aperturas-para-repartir-diferencias).
+- El sistema calcula las diferencias a nivel de ramo-compañía y las reparte en las aperturas y ocurrencias definidas en las hojas **Cuadre_Siniestros**, **Cuadre_Primas** y **Meses_cuadre_siniestros** del [archivo de segmentación](../config/segmentacion.md#aperturas-para-repartir-diferencias).
 - Si especificó más de una apertura, la diferencia se reparte proporcionalmente a la participación de cada apertura en la cifra contable histórica.
 
 !!! info
@@ -44,9 +44,6 @@ En la parte inferior, bajo los títulos **Archivos para incluir en controles y c
     - **"Motos"**, con $100,000 pagados en toda la historia.
     
     Para el cuadre contable, se asignarán $75 a "Autos" y $25 a "Motos" para agosto 2025.
-
-!!! note "Nota"
-    En el cuadre de siniestros, **toda la diferencia se asigna a la fecha de ocurrencia más reciente** dentro de cada fecha de registro.
 
 ## Controles de información
 

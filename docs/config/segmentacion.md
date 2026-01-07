@@ -97,10 +97,11 @@ Agregue dos hojas:
 - **Meses_cuadre_siniestros**  
 - **Meses_cuadre_primas**
 
-Cada una debe tener una tabla con los todos los meses de movimiento esperados, y columnas para especificar si cada cantidad se va a cuadrar o no. En estas columnas indique con:
+Cada una debe tener una tabla con los todos los meses de movimiento esperados, y columnas para especificar si cada cantidad se va a cuadrar o no.
 
-- **1** → se ajusta a la cifra contable.  
-- **0** → no se ajusta.
+En la hoja **Meses_cuadre_siniestros** debe incluirse una columna **fecha_siniestro**, que permitirá definir las ocurrencias sobre las cuales se distribuirá la diferencia contable de cada periodo. Complete las columnas de cantidades con las proporciones en las que se realizará dicha distribución. Si una cantidad no debe cuadrarse en un periodo determinado, deje el valor en **0**.
+
+En la hoja **Meses_cuadre_primas**, marque con un **1** los periodos contables y cantidades que desea cuadrar.
 
 !!! example "Ejemplo"
     ![Ejemplo meses cuadre](assets/ejemplo_meses_cuadre.png)
