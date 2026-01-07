@@ -71,7 +71,7 @@ El sistema compara la extracción actual contra la del **mes anterior**, tanto p
 
 Para Teradata, la comparación se hace al nivel más detallado: **apertura + periodo de ocurrencia + periodo de movimiento**. Esto permite identificar variaciones de montos totales y cambios en fechas de ocurrencia o movimiento.
 
-![Validación de consistencia histórica.](assets/controles/tera_vs_sap.png)
+![Validación de consistencia histórica.](assets/controles/consistencia_historica.png)
 
 !!! note "Nota"
     Esta evidencia solamente se genera para los análisis que corresponden a cierres contables.
