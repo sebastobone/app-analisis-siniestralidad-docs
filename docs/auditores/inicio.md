@@ -14,7 +14,7 @@ Adicionalmente, el administrador de la aplicación le entregará un usuario y co
 
 ## Ingresar al análisis
 
-Depués de ingresar a la aplicación, baje a la sección **Retomar análisis** y presione el análisis que desea auditar.
+Depués de ingresar a la aplicación, baje a la sección **Análisis disponibles** y presione el análisis que desea auditar.
 
 ## Abrir el libro de trabajo
 

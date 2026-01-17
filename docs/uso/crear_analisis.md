@@ -1,13 +1,17 @@
 # Crear un análisis
 
-En la interfaz web, verá la siguiente sección:
+En la interfaz web, verá la siguiente página:
 
-![Ingreso de parametros](../assets/crear_analisis.png)
+![Ingreso de parametros](../assets/seleccionar_analisis.png)
+
+Al presionar el botón **Crear nuevo análisis**, aparecerá la siguiente ventana:
+
+![Ventana crear análisis](../assets/crear_analisis.png)
 
 ## Pasos
 
 !!! tip "¿Retomando un análisis que ya comenzó?"
-    Baje a la sección **Retomar análisis** y haga click sobre el análisis que desea retomar.
+    Haga click sobre el análisis que desea retomar.
 
 1. Llene el campo **Nombre del análisis**.
 
@@ -26,9 +30,9 @@ En la interfaz web, verá la siguiente sección:
 4. En **Mes de corte**, escriba (en formato **YYYYMM**) el mes de corte de la información.
 5. En **Tipo de análisis**, elija entre **Triángulos** o **Entremés**.
 
-6. En **Cargar archivo de segmentación**, cargue el [archivo de segmentación](../config/segmentacion.md) que construyó. Si no tiene uno, presione el botón **Descargar ejemplo** para obtener un archivo guía.
+6. Use la casilla de verificación para marcar si el análisis hará parte de un ejercicio de **cierre contable**.
 
-7. Use la casilla de verificación para marcar si el análisis hará parte de un ejercicio de **cierre contable**.
+7. En **Cargar archivo de segmentación**, cargue el [archivo de segmentación](../config/segmentacion.md) que construyó. Si no tiene uno, presione el link para ir a una carpeta con ejemplos de archivos reales.
 
 8. Presione el botón **Crear análisis**. Será redirigido a la página donde hará el análisis.
 
