@@ -1,6 +1,6 @@
 <!--markdownlint-disable MD007-->
 
-# Consolidación de información
+# Consolidacion de informacion
 
 A continuación, se describe el proceso de consolidación de la información para ser utilizada en las plantillas de Excel.
 

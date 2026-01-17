@@ -78,7 +78,7 @@ Para Teradata, la comparación se hace al nivel más detallado: **apertura + per
 
 ### Consistencia entre información de entrada y la información que viaja a las plantillas
 
-El sistema compara la información de [los archivos finales de siniestros, primas, y expuestos](plantilla/consolidacion.md#consolidación-de-información) con la información final que viaja a la plantilla.
+El sistema compara la información de [los archivos finales de siniestros, primas, y expuestos](plantilla/consolidacion.md#consolidacion-de-informacion) con la información final que viaja a la plantilla.
 
 ![Validación de consistencia plantilla.](assets/controles/consistencia_plantilla.png)
 
