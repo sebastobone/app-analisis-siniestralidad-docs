@@ -26,7 +26,6 @@ nav:
     - Consolidar resultados y generar informes: uso/resultados.md
     - Cargar archivos adicionales: uso/archivos_adicionales.md
     - Descargar archivos: uso/descargar.md
-  - Versionamiento: versionamiento.md
   - Diccionario: diccionario.md
   - Cierres contables:
     - Configuraciones: cierre/configuraciones.md
@@ -36,6 +35,7 @@ nav:
     - Inicio: auditores/inicio.md
     - Revisar triángulos: auditores/triangulos.md
     - Revisar entremés: auditores/entremes.md
+  - Versionamiento: versionamiento.md
 
 theme:
   name: material
