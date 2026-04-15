@@ -1,0 +1,3695 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Gerencia de Modelacion Tecnica">
+      
+      
+        <link rel="canonical" href="https://sebastobone.github.io/app-analisis-siniestralidad-docs/1.3/versionamiento/">
+      
+      
+        <link rel="prev" href="../auditores/entremes/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Versionamiento - App Análisis Siniestralidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#versionamiento" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="App Análisis Siniestralidad" class="md-header__button md-logo" aria-label="App Análisis Siniestralidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            App Análisis Siniestralidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Versionamiento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sebastobone/app-analisis-siniestralidad" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="App Análisis Siniestralidad" class="md-nav__button md-logo" aria-label="App Análisis Siniestralidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    App Análisis Siniestralidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sebastobone/app-analisis-siniestralidad" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/segmentacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivo segmentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Construcción de queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Uso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/crear_analisis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crear un análisis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generar información
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Generar información
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/informacion/extraccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/informacion/carga_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carga manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/informacion/validaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/controles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generar controles y cuadrar contablemente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plantillas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plantillas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/plantilla/consolidacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidación de información
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/plantilla/crear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crear una plantilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/plantilla/estructura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura de la plantilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/plantilla/triangulos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analizar triángulos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/plantilla/entremes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analizar entremés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/plantilla/cargar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargar resultados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidar resultados y generar informes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/archivos_adicionales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargar archivos adicionales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso/descargar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descargar archivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diccionario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cierres contables
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cierres contables
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cierre/configuraciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuraciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cierre/particularidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Particularidades por negocio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pruebas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pruebas de funcionamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía para auditores
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guía para auditores
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditores/inicio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditores/triangulos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisar triángulos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditores/entremes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisar entremés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionamiento
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#130-2026-04-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.0 - 2026-04-15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Interno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-2026-03-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4 - 2026-03-29
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.4 - 2026-03-29">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interno_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Interno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-2026-02-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 - 2026-02-04
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.3 - 2026-02-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-2026-02-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 - 2026-02-02
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2 - 2026-02-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mejoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Mejoras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-2026-01-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 - 2026-01-14
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.1 - 2026-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-2026-01-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.0 - 2026-01-14
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.0 - 2026-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-disruptivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💥 Cambios disruptivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambios-internos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Cambios internos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-2026-01-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.0 - 2026-01-12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0 - 2026-01-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambios-internos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Cambios internos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-2026-01-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0.2 - 2026-01-07
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.2 - 2026-01-07">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-2026-01-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0.1 - 2026-01-05
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.1 - 2026-01-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-lanzamiento-web-2026-01-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0.0 — Lanzamiento web - 2026-01-04
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0 — Lanzamiento web - 2026-01-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-disruptivos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💥 Cambios disruptivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💥 Cambios disruptivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas-de-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plantillas de Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de auditoría
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reparticion-de-diferencias-contables-por-ocurrencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repartición de diferencias contables por ocurrencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Funcionamiento interno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0153-2025-09-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.3 - 2025-09-19
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.3 - 2025-09-19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0152-2025-09-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.2 - 2025-09-16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.2 - 2025-09-16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0151-2025-09-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.1 - 2025-09-16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.1 - 2025-09-16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0150-2025-09-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.0 - 2025-09-12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.0 - 2025-09-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0140-2025-09-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.14.0 - 2025-09-10
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.14.0 - 2025-09-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0132-2025-09-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.13.2 - 2025-09-09
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.13.2 - 2025-09-09">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0131-2025-09-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.13.1 - 2025-09-09
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.13.1 - 2025-09-09">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0130-2025-09-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.13.0 - 2025-09-08
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.13.0 - 2025-09-08">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-disruptivos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💥 Cambios disruptivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otras-mejoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Otras mejoras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0123-2025-09-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.3 - 2025-09-04
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.3 - 2025-09-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0122-2025-08-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.2 - 2025-08-26
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.2 - 2025-08-26">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0121-2025-08-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.1 - 2025-08-25
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.1 - 2025-08-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0120-2025-08-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.0 - 2025-08-25
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.0 - 2025-08-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0110-2025-08-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.11.0 - 2025-08-03
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.0 - 2025-08-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#130-2026-04-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.0 - 2026-04-15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Interno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-2026-03-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4 - 2026-03-29
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.4 - 2026-03-29">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interno_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Interno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-2026-02-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 - 2026-02-04
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.3 - 2026-02-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-2026-02-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 - 2026-02-02
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2 - 2026-02-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mejoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Mejoras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-2026-01-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 - 2026-01-14
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.1 - 2026-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-2026-01-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.0 - 2026-01-14
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.0 - 2026-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-disruptivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💥 Cambios disruptivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambios-internos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Cambios internos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-2026-01-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.0 - 2026-01-12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0 - 2026-01-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambios-internos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Cambios internos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-2026-01-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0.2 - 2026-01-07
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.2 - 2026-01-07">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-2026-01-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0.1 - 2026-01-05
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.1 - 2026-01-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-lanzamiento-web-2026-01-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0.0 — Lanzamiento web - 2026-01-04
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0 — Lanzamiento web - 2026-01-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-disruptivos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💥 Cambios disruptivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💥 Cambios disruptivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionamiento general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantillas-de-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plantillas de Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de auditoría
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reparticion-de-diferencias-contables-por-ocurrencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repartición de diferencias contables por ocurrencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionamiento-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Funcionamiento interno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0153-2025-09-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.3 - 2025-09-19
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.3 - 2025-09-19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0152-2025-09-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.2 - 2025-09-16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.2 - 2025-09-16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0151-2025-09-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.1 - 2025-09-16
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.1 - 2025-09-16">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0150-2025-09-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.15.0 - 2025-09-12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.15.0 - 2025-09-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0140-2025-09-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.14.0 - 2025-09-10
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.14.0 - 2025-09-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0132-2025-09-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.13.2 - 2025-09-09
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.13.2 - 2025-09-09">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0131-2025-09-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.13.1 - 2025-09-09
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.13.1 - 2025-09-09">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0130-2025-09-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.13.0 - 2025-09-08
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.13.0 - 2025-09-08">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-disruptivos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💥 Cambios disruptivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otras-mejoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Otras mejoras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0123-2025-09-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.3 - 2025-09-04
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.3 - 2025-09-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0122-2025-08-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.2 - 2025-08-26
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.2 - 2025-08-26">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0121-2025-08-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.1 - 2025-08-25
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.1 - 2025-08-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0120-2025-08-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.12.0 - 2025-08-25
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.0 - 2025-08-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0110-2025-08-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.11.0 - 2025-08-03
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.0 - 2025-08-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuevas-funcionalidades_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Nuevas funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐞 Correcciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--markdownlint-disable MD046-->
+<!--markdownlint-disable MD024-->
+<!--markdownlint-disable MD007-->
+
+<h1 id="versionamiento">Versionamiento</h1>
+<h2 id="130-2026-04-15">1.3.0 - 2026-04-15</h2>
+<h2 id="nuevas-funcionalidades">✨ Nuevas funcionalidades</h2>
+<ul>
+<li>Agregar tabla para visualizar y descargar el archivo de segmentación cargado #68</li>
+</ul>
+<h2 id="interno">📦 Interno</h2>
+<ul>
+<li>Crear diagramas de documentación de la aplicación</li>
+</ul>
+<h2 id="124-2026-03-29">1.2.4 - 2026-03-29</h2>
+<h3 id="correcciones">🐞 Correcciones</h3>
+<ul>
+<li>Corregir botón <strong>Preparar plantilla</strong> para que actualice la información de hojas ya generadas #64</li>
+</ul>
+<h3 id="interno_1">📦 Interno</h3>
+<ul>
+<li>Crear tests para probar los queries de cierre contable oficiales almacenados en <code>referencias/</code></li>
+<li>Cambiar type checker por <code>zuban</code></li>
+<li>Eliminar dependencia de <code>sse-starlette</code>, pues ahora <code>fastapi</code> implementa SSE nativamente</li>
+<li>Actualizar dependencias y vulnerabilidades</li>
+</ul>
+<h2 id="123-2026-02-04">1.2.3 - 2026-02-04</h2>
+<h3 id="correcciones_1">🐞 Correcciones</h3>
+<ul>
+<li>Corregir aperturas y modelo de cierre de autonomía</li>
+<li>Mostrar errores tipo HTTP 4XX en frontend para mejorar retroalimentación</li>
+</ul>
+<h2 id="122-2026-02-02">1.2.2 - 2026-02-02</h2>
+<h3 id="mejoras">🛠️ Mejoras</h3>
+<ul>
+<li>Agregar link para ver ejemplos de queries reales.</li>
+<li>Evitar recolectar LazyFrame para pivotear columnas.</li>
+</ul>
+<h3 id="correcciones_2">🐞 Correcciones</h3>
+<ul>
+<li>Corregir link de AFOs de referencia.</li>
+</ul>
+<h2 id="121-2026-01-14">1.2.1 - 2026-01-14</h2>
+<h3 id="correcciones_3">🐞 Correcciones</h3>
+<ul>
+<li>Se impide que los botones que hacen peticiones al servidor puedan presionarse más de una vez antes de recibir la respuesta, con el fin de prevenir peticiones duplicadas.</li>
+</ul>
+<h2 id="120-2026-01-14">1.2.0 - 2026-01-14</h2>
+<h3 id="cambios-disruptivos">💥 Cambios disruptivos</h3>
+<ul>
+<li><strong>Límite de descarga de archivos</strong>
+Se bloquea la descarga de archivos mayores a <strong>20 MB</strong> desde la interfaz web, con el fin de evitar sobrepasar los límites de transferencia de datos del servidor.
+Los archivos que superen este tamaño deberán seguir solicitándose directamente al administrador de la aplicación.</li>
+</ul>
+<h3 id="cambios-internos">📦 Cambios internos</h3>
+<ul>
+<li><strong>Type checking en el frontend</strong>
+Se implementa verificación de tipos en el código fuente del frontend para mejorar la robustez, mantenibilidad y detección temprana de errores.</li>
+</ul>
+<h2 id="110-2026-01-12">1.1.0 - 2026-01-12</h2>
+<h3 id="nuevas-funcionalidades_1">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Secciones colapsables</strong>
+Ahora las secciones de la interfaz web pueden colapsarse cuando no están en uso, facilitando la navegación y reduciendo el ruido visual.</li>
+<li><strong>Pop-up para crear análisis</strong>
+La creación de nuevos análisis se realiza ahora mediante una ventana emergente, accesible desde un botón ubicado debajo de la tabla de análisis.</li>
+<li><strong>Mejora en la presentación de tablas</strong>
+Se optimiza el formato y la disposición de las tablas para una lectura y navegación más clara.</li>
+<li><strong>Notificaciones de errores mejoradas</strong>
+Las notificaciones de error ahora son más detalladas y se generan de forma consistente para todos los botones de la interfaz web.</li>
+</ul>
+<h3 id="correcciones_4">🐞 Correcciones</h3>
+<ul>
+<li>Se notifica al usuario cuando la sesión ha expirado, solicitando un nuevo inicio de sesión.</li>
+<li>El informe del <strong>Actuario Responsable</strong> se genera únicamente cuando el análisis corresponde a un cierre contable y sólo con los archivos del análisis seleccionado.</li>
+<li>Se eliminan correctamente los checkboxes de candidatos a controles cuando los archivos asociados son borrados desde la interfaz web.</li>
+<li>Se elimina el botón para descargar todas las plantillas simultáneamente.</li>
+<li>El botón <strong>“Descargar ejemplo de segmentación”</strong> se reemplaza por un enlace a una sección con múltiples ejemplos descargables.</li>
+<li>Se impide la creación de plantillas si no se ha cargado al menos un archivo para cada entrada requerida (siniestros, primas y expuestos).</li>
+<li>Los botones de la interfaz web se desactivan mientras una petición está en curso, evitando el doble procesamiento.</li>
+</ul>
+<h3 id="cambios-internos_1">📦 Cambios internos</h3>
+<ul>
+<li>Centralización del manejo de errores (HTTP y excepciones generales) en un único módulo.</li>
+<li>Simplificación de los estilos asociados a los checkboxes.</li>
+</ul>
+<h2 id="102-2026-01-07">1.0.2 - 2026-01-07</h2>
+<h3 id="correcciones_5">🐞 Correcciones</h3>
+<ul>
+<li>Arreglar botón para descargar ejemplo de archivo segmentación.</li>
+</ul>
+<h2 id="101-2026-01-05">1.0.1 - 2026-01-05</h2>
+<h3 id="correcciones_6">🐞 Correcciones</h3>
+<ul>
+<li>Corregir periodos de ocurrencia del formato de Actuario Responsable para periodicidades con meses corridos</li>
+</ul>
+<h2 id="100-lanzamiento-web-2026-01-04">1.0.0 — Lanzamiento web - 2026-01-04</h2>
+<p>Esta versión marca un <strong>hito mayor</strong> en la evolución de la aplicación: el paso de una aplicación instalada localmente a una <strong>plataforma web centralizada</strong>, con control de usuarios, almacenamiento en servidor y nuevos flujos operativos.</p>
+<h3 id="cambios-disruptivos_1">💥 Cambios disruptivos</h3>
+<h4 id="funcionamiento-general">Funcionamiento general</h4>
+<ul>
+<li>La aplicación <strong>ya no se instala localmente</strong>. Ahora se accede desde la web: <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f449.svg" title=":point_right:" /> <a href="https://predeterminate-bandoliered-gino.ngrok-free.dev/">https://predeterminate-bandoliered-gino.ngrok-free.dev/</a></li>
+<li>El acceso requiere <strong>usuario y contraseña</strong>.</li>
+<li>Todos los análisis creados se almacenan en el servidor, incluyendo:<ul>
+<li>Archivos cargados</li>
+<li>Parametrizaciones</li>
+<li>Resultados</li>
+</ul>
+</li>
+<li>Los <strong>archivos de segmentación, AFOs y queries</strong> ahora se cargan exclusivamente desde la <strong>interfaz web</strong>.</li>
+</ul>
+<h4 id="plantillas-de-excel">Plantillas de Excel</h4>
+<ul>
+<li>Funcionalidades que antes estaban en la interfaz web ahora se encuentran <strong>dentro de las plantillas</strong>:<ul>
+<li>Botones para ejecución de macros.</li>
+<li>Listas desplegables de aperturas, atributos y referencias de entremés.</li>
+</ul>
+</li>
+<li>La hoja <strong>Entremés ya no se genera automáticamente</strong> al ejecutar la macro <strong>Preparar plantilla</strong>.<ul>
+<li>Ahora incluye un botón específico <strong>Generar</strong> dentro de la hoja.</li>
+</ul>
+</li>
+</ul>
+<h4 id="documentacion">Documentación</h4>
+<ul>
+<li>Nuevo enlace oficial de la documentación:<ul>
+<li><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f449.svg" title=":point_right:" /> <a href="https://sebastobone.github.io/app-analisis-siniestralidad-docs/latest/">https://sebastobone.github.io/app-analisis-siniestralidad-docs/latest/</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="proceso-de-auditoria">Proceso de auditoría</h4>
+<ul>
+<li>Los auditores <strong>ya no necesitan descargar la aplicación</strong>.</li>
+<li>Pueden acceder vía web con un rol de <strong>solo lectura</strong>, lo que les permite:<ul>
+<li>Visualizar análisis y archivos</li>
+<li>Interactuar con la aplicación</li>
+<li><strong>Sin posibilidad de modificar</strong> información almacenada en el servidor</li>
+</ul>
+</li>
+</ul>
+<h4 id="reparticion-de-diferencias-contables-por-ocurrencia">Repartición de diferencias contables por ocurrencia</h4>
+<ul>
+<li>Las diferencias contables ya no se asignan obligatoriamente a la ocurrencia más reciente.</li>
+<li>Se pueden definir porcentajes de distribución entre ocurrencias.</li>
+<li>Se debe agregar la columna <strong>fecha_siniestro</strong> a la hoja <strong>Meses_cuadre_siniestros</strong> del archivo de segmentación.</li>
+</ul>
+<h3 id="nuevas-funcionalidades_2">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Control SOX – Inconsistencia de fechas</strong>
+Se genera una nueva evidencia SOX que identifica registros donde la <strong>fecha de siniestro es posterior a la fecha de registro</strong>.</li>
+<li><strong>Script de migración</strong>
+Se implementa un script para migrar y almacenar análisis realizados con versiones anteriores de la aplicación.</li>
+<li><strong>Panel de administración</strong><ul>
+<li>Creación, edición y eliminación de usuarios.</li>
+<li>Gestión centralizada de accesos.</li>
+</ul>
+</li>
+<li><strong>Exclusiones por desviaciones estándar</strong><ul>
+<li>En las plantillas de Excel se incorpora la opción de excluir factores de desarrollo que superen un número configurable de desviaciones estándar.</li>
+</ul>
+</li>
+<li><strong>Periodicidades con meses corridos</strong><ul>
+<li>Ahora es posible definir periodicidades no alineadas al calendario tradicional.</li>
+<li>Ejemplo: <strong>Semestral (Abr–Sep | Oct–Mar)</strong> permite construir triángulos y entremeses con esos cortes.</li>
+</ul>
+</li>
+<li><strong>Archivos base para Empresariales</strong><ul>
+<li>Los archivos de segmentación y queries de este negocio se incluyen <strong>por defecto en el repositorio</strong>.</li>
+<li>Disponibles al descargar ejemplos desde la aplicación.</li>
+</ul>
+</li>
+</ul>
+<h3 id="correcciones_7">🐞 Correcciones</h3>
+<ul>
+<li>Se impide la existencia de <strong>aperturas sobrantes</strong> en el archivo de segmentación.<ul>
+<li>Las salidas de los queries deben coincidir <strong>exactamente</strong> con dichas aperturas.</li>
+</ul>
+</li>
+<li>Se bloquea el ingreso de <strong>fechas nulas</strong> (siniestro o registro) en la carga manual de archivos.</li>
+<li>Los valores nulos en cargas manuales ahora se <strong>completan automáticamente con ceros</strong>.</li>
+<li>Se corrige la lógica que determina si un query corresponde a <strong>subida de tablas</strong>.</li>
+<li>Se implementa <strong>cache busting</strong> para asegurar que la interfaz web siempre cargue la versión más reciente.</li>
+<li>Los <strong>errores del servidor</strong> ahora se muestran explícitamente en la interfaz web.</li>
+</ul>
+<h3 id="funcionamiento-interno">📦 Funcionamiento interno</h3>
+<ul>
+<li>Almacenamiento de <strong>metadata asociada a pantallazos SOX</strong>.</li>
+<li>Reemplazo de:<ul>
+<li><code>pre-commit</code> → <code>prek</code></li>
+<li><code>mypy</code> → <code>ty</code></li>
+</ul>
+</li>
+<li>La documentación se mueve a un repositorio independiente:<ul>
+<li><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f449.svg" title=":point_right:" /> <a href="https://github.com/sebastobone/app-analisis-siniestralidad-docs">https://github.com/sebastobone/app-analisis-siniestralidad-docs</a></li>
+</ul>
+</li>
+<li>Optimización de los <strong>tests de integración</strong> no relacionados con las plantillas.</li>
+<li>Vectorización del cálculo de <strong>factores de completitud</strong>.</li>
+</ul>
+<h3 id="documentacion_1">📚 Documentación</h3>
+<ul>
+<li>Se agrega un <strong>filtro</strong> para alternar entre la documentación de la versión web y la versión anterior.</li>
+<li>Se documenta el <strong>nuevo flujo de trabajo</strong> entre:<ul>
+<li>Interfaz web</li>
+<li>Plantillas de Excel</li>
+</ul>
+</li>
+</ul>
+<h2 id="0153-2025-09-19">0.15.3 - 2025-09-19</h2>
+<h3 id="correcciones_8">🐞 Correcciones</h3>
+<ul>
+<li>Se corrige generación de cajitas de archivos candidatos para controles de expuestos.</li>
+<li>Se corrige generación de evidencia de archivo de segmentación.</li>
+</ul>
+<h2 id="0152-2025-09-16">0.15.2 - 2025-09-16</h2>
+<h3 id="correcciones_9">🐞 Correcciones</h3>
+<ul>
+<li>Se corrigen links rotos y formatos en el README del repositorio.</li>
+</ul>
+<h2 id="0151-2025-09-16">0.15.1 - 2025-09-16</h2>
+<h3 id="nuevas-funcionalidades_3">✨ Nuevas funcionalidades</h3>
+<ul>
+<li>
+<p><strong>Hoja Indexaciones</strong>
+Se agrega una tabla por defecto con indicadores comunes.</p>
+</li>
+<li>
+<p><strong>Descargar ejemplos con aperturas propias</strong>
+Ahora los ejemplos de archivos de siniestros, primas, y expuestos se generan con las aperturas del análisis, no con aperturas genéricas.</p>
+</li>
+<li>
+<p><strong>Validación de aperturas no nulas</strong>
+Ahora se valida también que en el archivo de segmentación no hayan aperturas con valores nulos.</p>
+</li>
+</ul>
+<h3 id="correcciones_10">🐞 Correcciones</h3>
+<ul>
+<li>Se corrige el envío de las referencias del entremés al <strong>preparar plantilla</strong>.</li>
+<li>Al <strong>preparar plantilla</strong>, se actualizan los datos de <strong>plantillas ya generadas</strong>.</li>
+</ul>
+<h3 id="documentacion_2">📚 Documentación</h3>
+<ul>
+<li>Se robustece la documentación de las nuevas funcionalidades y de la guía para auditores.</li>
+</ul>
+<h2 id="0150-2025-09-12">0.15.0 - 2025-09-12</h2>
+<h3 id="nuevas-funcionalidades_4">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Carga de queries desde interfaz web</strong>
+Ahora es posible cargar los queries directamente desde la interfaz web. La opción de carga manual desde la carpeta se mantiene disponible.</li>
+</ul>
+<h3 id="documentacion_3">📚 Documentación</h3>
+<ul>
+<li>Se robustece la guía para auditores con imágenes y ejemplos.</li>
+</ul>
+<h2 id="0140-2025-09-10">0.14.0 - 2025-09-10</h2>
+<h3 id="nuevas-funcionalidades_5">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Carga manual de AFOs desde la interfaz web</strong>
+Ahora es posible cargar los archivos <strong>AFO</strong> directamente desde la interfaz web. La opción de carga manual desde la carpeta se mantiene disponible.</li>
+</ul>
+<h3 id="mantenimiento">📦 Mantenimiento</h3>
+<ul>
+<li>Eliminación de dependencias innecesarias para optimizar la instalación de la aplicación.</li>
+</ul>
+<h2 id="0132-2025-09-09">0.13.2 - 2025-09-09</h2>
+<h3 id="correcciones_11">🐞 Correcciones</h3>
+<ul>
+<li>Se corrigen links rotos en la documentación</li>
+</ul>
+<h2 id="0131-2025-09-09">0.13.1 - 2025-09-09</h2>
+<h3 id="correcciones_12">🐞 Correcciones</h3>
+<ul>
+<li>Se ajusta la consolidación de <strong>archivos de siniestros, primas y expuestos</strong> para que tenga en cuenta el resultado del proceso de <strong>cuadre contable</strong>.</li>
+</ul>
+<h3 id="documentacion_4">📚 Documentación</h3>
+<ul>
+<li>Se incorpora una nueva <strong>guía para auditores</strong>.</li>
+</ul>
+<h2 id="0130-2025-09-08">0.13.0 - 2025-09-08</h2>
+<h3 id="cambios-disruptivos_2">💥 Cambios disruptivos</h3>
+<ul>
+<li><strong>Estructura del archivo de segmentación</strong><ul>
+<li>Se elimina la columna <code>apertura_reservas</code>, la cual ahora se construye de manera interna.</li>
+<li>Se incorporan nuevas columnas para definir la <strong>metodología de indexación de severidad</strong> en cada apertura.</li>
+<li>Para <strong>Movilidad</strong> y <strong>SOAT</strong>, las tablas de <strong>primas de asistencia</strong> y <strong>fraude</strong> ya no se cargarán en este archivo, sino a través del nuevo mecanismo de carga manual.</li>
+</ul>
+</li>
+<li><strong>Credenciales de Teradata</strong>
+Las credenciales ya no se almacenan en el archivo <code>.env.private</code>, sino que se ingresan directamente desde la <strong>interfaz web</strong>.</li>
+</ul>
+<h3 id="nuevas-funcionalidades_6">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Metodologías de indexación de severidad</strong>
+Se agregan nuevas formas de estimar la severidad mediante indexaciones basadas en <strong>indicadores por fecha de ocurrencia</strong> o <strong>fecha de movimiento</strong>.</li>
+<li><strong>Carga manual de archivos</strong>
+Ahora es posible cargar manualmente los archivos de <strong>segmentación, siniestros, primas y expuestos</strong> desde la interfaz web. Además, se incluye la opción de <strong>descargar ejemplos</strong> de estos archivos como referencia para su construcción.</li>
+<li><strong>Controles y cuadre contable más versátil</strong>
+La generación de controles y el cuadre contable ya no se limita a los archivos extraídos de <strong>Teradata</strong>. Ahora se pueden incluir <strong>uno o varios archivos cargados manualmente</strong> dentro de la comparación.
+Se agregan también <strong>checkboxes</strong> para decidir si aplicar o no el proceso de cuadre contable en <strong>primas</strong> y <strong>siniestros</strong>.</li>
+</ul>
+<h3 id="correcciones_13">🐞 Correcciones</h3>
+<ul>
+<li>Se mantiene el atributo actual al cambiar de plantilla (ejemplo: si está en <em>Severidad</em> – <em>Retenido</em> y cambia a <em>Plata</em>, se conserva la lista desplegable en <em>Retenido</em>).</li>
+<li>En los comandos <strong>"Guardar todo"</strong> y <strong>"Traer y guardar todo"</strong>, se corrige la actualización de progreso para que se muestre <strong>en tiempo real</strong>.</li>
+</ul>
+<h3 id="otras-mejoras">🛠️ Otras mejoras</h3>
+<ul>
+<li>Simplificación del ingreso de parámetros en la interfaz web.</li>
+<li>Generación dinámica de la interfaz web en función de los parámetros ingresados.</li>
+<li>Mejoras en la retroalimentación de las notificaciones dentro de la interfaz web.</li>
+<li>Se agrega un nuevo negocio <strong>“Custom”</strong>, diseñado para análisis personalizados fuera de la lista convencional.</li>
+</ul>
+<h3 id="documentacion_5">📚 Documentación</h3>
+<ul>
+<li>Se explica cómo recibir notificaciones por correo sobre nuevas versiones de la aplicación.</li>
+<li>Se agrega la guía para resolver problemas ocasionados por <strong>plantillas de Excel almacenadas en OneDrive o SharePoint</strong>.</li>
+</ul>
+<h2 id="0123-2025-09-04">0.12.3 - 2025-09-04</h2>
+<h3 id="correcciones_14">🐞 Correcciones</h3>
+<ul>
+<li><strong>Plantilla de Entremés</strong>: Se corrige el error que hacía que las fórmulas se pegaran como texto al volver a preparar una plantilla previamente preparada.</li>
+</ul>
+<h2 id="0122-2025-08-26">0.12.2 - 2025-08-26</h2>
+<h3 id="correcciones_15">🐞  Correcciones</h3>
+<ul>
+<li><strong>Gráfica de factores</strong>: Se ajusta la generación de la gráfica para garantizar su correcto funcionamiento en aperturas con pocos datos.</li>
+<li><strong>Activación del libro</strong>: Antes de ejecutar cualquier función de la plantilla, el libro de Excel se traerá automáticamente al primer plano. Esto permite trabajar con varios libros abiertos sin interferir con la plantilla.</li>
+<li><strong>Filtro de fechas</strong>: El filtro de fechas ahora se aplica también durante el procesamiento de información ingresada manualmente (no extraída de Teradata), asegurando uniformidad en todos los datos.</li>
+</ul>
+<h3 id="documentacion_6">📚 Documentación</h3>
+<ul>
+<li>Se incorpora una nueva sección de <strong>Preguntas frecuentes (FAQ)</strong>.</li>
+</ul>
+<h2 id="0121-2025-08-25">0.12.1 - 2025-08-25</h2>
+<h3 id="nuevas-funcionalidades_7">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Siniestros atípicos de movilidad</strong>: Se actualiza el valor para clasificar un siniestro como atípico en movilidad.</li>
+</ul>
+<h2 id="0120-2025-08-25">0.12.0 - 2025-08-25</h2>
+<h3 id="nuevas-funcionalidades_8">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Prepararación automática antes de traer y guardar todo</strong>: Ahora, al ejecutar las funciones <strong>"Traer y guardar todo"</strong> o <strong>"Traer fórmulas entremés"</strong>, se ejecuta automáticamente la función <strong>"Preparar plantilla"</strong>.</li>
+<li><strong>Preparar plantilla no invasivo</strong>: La función <strong>"Preparar plantilla"</strong> ya no elimina el contenido de las plantillas de triángulos o entremés, evitando la pérdida de modificaciones realizadas para el análisis.</li>
+<li><strong>Evidencia SOX de consistencia</strong>: Cada vez que se ejecuta <strong>"Preparar plantilla"</strong>, se genera automáticamente una evidencia SOX que valida que la información enviada a la plantilla coincide con la obtenida en el proceso de extracción y cuadre contable.</li>
+</ul>
+<h3 id="correcciones_16">🐞 Correcciones</h3>
+<ul>
+<li><strong>Agrupación de ocurrencias mensuales en análisis anteriores</strong>: En los análisis de triángulos con granularidad distinta a la mensual, ahora las ocurrencias mensuales de análisis previos se agrupan correctamente, permitiendo comparaciones más precisas contra los resultados del triángulo.</li>
+<li><strong>Segmentación de dependencias</strong>: Durante la instalación de la aplicación, únicamente se descargarán las dependencias necesarias para su funcionamiento, excluyendo las de desarrollo.</li>
+</ul>
+<h3 id="documentacion_7">📚 Documentación</h3>
+<ul>
+<li>Revisión y ajuste de la descripción de las funciones <strong>"Preparar plantilla"</strong>, <strong>"Traer y guardar todo"</strong> y <strong>"Traer fórmulas entremés"</strong>, incorporando las nuevas funcionalidades.</li>
+<li>Actualización de los comandos de instalación según la nueva segmentación de dependencias.</li>
+</ul>
+<h2 id="0110-2025-08-03">0.11.0 - 2025-08-03</h2>
+<h3 id="nuevas-funcionalidades_9">✨ Nuevas funcionalidades</h3>
+<ul>
+<li><strong>Gráfica de factores de desarrollo</strong>: Ahora puedes visualizar los factores de desarrollo de los triángulos a través de una nueva gráfica interactiva. Esta herramienta facilita la interpretación de tendencias y permite un análisis más intuitivo de los datos.</li>
+<li><strong>'Guardar y Traer Todo' por atributo</strong>: La lógica se ha modificado para considerar únicamente el atributo actual (bruto o retenido) al momento de guardar o cargar información, permitiendo el uso de esta funcionalidad para negocios que no analizan ambos atributos.</li>
+</ul>
+<h3 id="correcciones_17">🐞 Correcciones</h3>
+<ul>
+<li><strong>Query de siniestros de movilidad</strong>: Se actualizó la lógica de casos atípicos en movilidad para mantener la consistencia entre el entremés y los triángulos.</li>
+</ul>
+<h3 id="mantenimiento_1">📦 Mantenimiento</h3>
+<ul>
+<li><strong>Actualización de dependencias</strong>: Se actualizaron librerías y paquetes del proyecto para garantizar mayor estabilidad y seguridad.</li>
+</ul>
+<h3 id="documentacion_8">📚 Documentación</h3>
+<p>Se realizó una mejora sustancial a la documentación del proyecto:</p>
+<ul>
+<li>Se añadieron secciones sobre:<ul>
+<li>Análisis de triángulos y entremés</li>
+<li>Procesamiento y extracción de información</li>
+<li>Pruebas, versionamiento y resultados</li>
+<li>Estructura del frontend con imágenes organizadas</li>
+</ul>
+</li>
+<li>Se reorganizó la documentación para una navegación más clara y amigable.</li>
+<li>Se documentó detalladamente la <strong>nueva gráfica de factores</strong>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.code.select", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
