@@ -4,6 +4,16 @@
 
 # Versionamiento
 
+## 1.3.0 - 2026-04-15
+
+### ✨ Nuevas funcionalidades
+
+- Agregar tabla para visualizar y descargar el archivo de segmentación cargado #68
+
+### 📦 Interno
+
+- Crear diagramas de documentación de la aplicación
+
 ## 1.2.4 - 2026-03-29
 
 ### 🐞 Correcciones
