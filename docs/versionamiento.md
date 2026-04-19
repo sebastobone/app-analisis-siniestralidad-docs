@@ -4,6 +4,35 @@
 
 # Versionamiento
 
+## 1.4.0 - 2026-04-19
+
+### ✨ Mejoras
+
+- Los archivos de consistencia histórica ahora respetan cambios en las aperturas. Desde la interfaz web se podrá elegir el nivel de granularidad con el que se generarán estas evidencias.
+    - **Nota:** Si existen análisis con una granularidad más agregada que la seleccionada, estos no se incluirán en la evidencia.
+
+- **Plantillas de triángulos**
+    - Se añadió una opción para evitar la exclusión automática de factores basada en desviaciones estándar.
+    - Se incorpora la metodología **"sin_ibnr"** para forzar el _ultimate_ a ser igual al incurrido.
+
+### 📦 Interno
+
+- Se agrega en la tabla **Analisis** campos para almacenar las aperturas de siniestros, primas, y expuestos.
+
+## 1.3.1 - 2026-04-16
+
+### ✨ Mejoras
+
+- El tamaño máximo de descarga de archivos pasa a ser de 20 MB a 50 MB.
+
+### 🐞 Correcciones
+
+- Corregir botón de cargar AFOs.
+
+### 📦 Interno
+
+- Mover parámetro de tamaño máximo de descarga a variables de entorno.
+
 ## 1.3.0 - 2026-04-15
 
 ### ✨ Nuevas funcionalidades
@@ -289,7 +318,7 @@ Se agregan también **checkboxes** para decidir si aplicar o no el proceso de cu
 
 ### 🐞 Correcciones
 
-- Se mantiene el atributo actual al cambiar de plantilla (ejemplo: si está en *Severidad* – *Retenido* y cambia a *Plata*, se conserva la lista desplegable en *Retenido*).
+- Se mantiene el atributo actual al cambiar de plantilla (ejemplo: si está en _Severidad_ – _Retenido_ y cambia a _Plata_, se conserva la lista desplegable en _Retenido_).
 - En los comandos **"Guardar todo"** y **"Traer y guardar todo"**, se corrige la actualización de progreso para que se muestre **en tiempo real**.
 
 ### 🛠️ Otras mejoras

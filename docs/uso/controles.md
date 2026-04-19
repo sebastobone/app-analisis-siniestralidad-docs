@@ -67,14 +67,33 @@ Por defecto, el sistema alerta si detecta una diferencia **mayor al 5%** en algu
 
 ### Consistencia histórica
 
-El sistema compara la extracción actual contra la del **mes anterior**, tanto para Teradata como para SAP.
+El sistema compara la extracción actual contra la de meses anteriores, tanto para Teradata como para SAP, con el objetivo de detectar cambios relevantes en la información.
 
-Para Teradata, la comparación se hace al nivel más detallado: **apertura + periodo de ocurrencia + periodo de movimiento**. Esto permite identificar variaciones de montos totales y cambios en fechas de ocurrencia o movimiento.
+Para Teradata, la validación se realiza considerando:
+
+- El nivel de aperturas seleccionado en la interfaz web
+- El periodo de ocurrencia
+- El periodo de movimiento
+
+Esto permite identificar variaciones en los montos totales y cambios en las fechas de ocurrencia o movimiento.
 
 ![Validación de consistencia histórica.](assets/controles/consistencia_historica.png)
 
-!!! note "Nota"
-    Esta evidencia solamente se genera para los análisis que corresponden a cierres contables.
+#### Manejo de diferentes niveles de granularidad
+
+Si los análisis históricos fueron generados con un nivel de aperturas distinto al actual, la interfaz mostrará opciones para definir cómo construir la evidencia.
+
+Las reglas son:
+
+- Si un análisis histórico tiene una **granularidad menor** (más agregado) que la seleccionada, **no se incluye** en la evidencia.
+- Si tiene una **granularidad mayor** (más detallada), se agrupa al nivel seleccionado y **sí se incluye**.
+
+!!! example "Ejemplo"
+    Supongamos que los análisis históricos se hicieron con las aperturas **codigo_op - codigo_ramo_op - cobertura_general_desc - cobertura_desc**, y en el análisis actual se agregó una nueva apertura para siniestros.
+
+    En este caso, la interfaz permitirá elegir entre distintos niveles de granularidad para generar la evidencia:
+
+    ![Niveles de granularidad para la consistencia histórica.](assets/controles/opciones_consistencia_historica.png)
 
 ### Consistencia entre información de entrada y la información que viaja a las plantillas
 
