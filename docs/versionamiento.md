@@ -4,6 +4,16 @@
 
 # Versionamiento
 
+## 1.5.0 - 2026-04-20
+
+### 💥 Cambios disruptivos
+
+- Ahora se pueden asignar pesos personalizados a cada apertura para realizar el proceso de cuadre contable. Esto implica cambios en la estructura del archivo de segmentación.
+
+### ✨ Mejoras
+
+- Se agrega un resumen de las características del análisis en la interfaz web #65
+
 ## 1.4.0 - 2026-04-19
 
 ### ✨ Mejoras

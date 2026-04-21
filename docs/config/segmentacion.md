@@ -75,36 +75,28 @@ En **Apertura_Siniestros**, para cada apertura se debe definir:
 !!! tip
     Si no realizará cuadre contable, puede omitir esta sección.
 
-### Aperturas para repartir diferencias
+### Aperturas y periodos para repartir diferencias
 
 Cree dos hojas:
 
 1. **Cuadre_Siniestros**
 2. **Cuadre_Primas**
 
-En cada una incluya una tabla con las aperturas donde se repartirán las diferencias detectadas.
+En cada una incluya una tabla con:
 
-!!! note "Nota"
-    Para entender la lógica de repartición, consulte la [guía de cuadre contable](../uso/controles.md#reparticion-de-diferencias-contables).
+- Las aperturas.
+- La fecha de ocurrencia (sólo para **Cuadre_Siniestros**).
+- Todos los meses de movimiento esperados.
+- Columnas para especificar el peso de repartición de cada una de las cantidades en cada apertura-ocurrencia.
+
+Si una cantidad no debe cuadrarse en un periodo contable determinado, deje el valor en **0** para todas las aperturas y fechas de ocurrencia correspondientes.
+
+Si el valor de la ponderación suma más que 1 para un periodo contable, el sistema lo normalizará automáticamente.
 
 !!! example "Ejemplo"
+    Supongamos que tenemos una diferencia de $100 para el periodo contable 202412 y queremos repartirla por igual en las ocurrencias de 202411 y 202412. Adicionalmente, queremos que 1/3 se asigne a la "apertura_1", 1/2 a la "apertura_2", y 1/3 a la "apertura_3". En ese caso, la hoja se podría parametrizar así:
+
     ![Ejemplo cuadre](assets/ejemplo_cuadre.png)
-
-### Meses y cantidades a cuadrar
-
-Agregue dos hojas:
-
-- **Meses_cuadre_siniestros**  
-- **Meses_cuadre_primas**
-
-Cada una debe tener una tabla con los todos los meses de movimiento esperados, y columnas para especificar si cada cantidad se va a cuadrar o no.
-
-En la hoja **Meses_cuadre_siniestros** debe incluirse una columna **fecha_siniestro**, que permitirá definir las ocurrencias sobre las cuales se distribuirá la diferencia contable de cada periodo. Complete las columnas de cantidades con las proporciones en las que se realizará dicha distribución. Si una cantidad no debe cuadrarse en un periodo determinado, deje el valor en **0**.
-
-En la hoja **Meses_cuadre_primas**, marque con un **1** los periodos contables y cantidades que desea cuadrar.
-
-!!! example "Ejemplo"
-    ![Ejemplo meses cuadre](assets/ejemplo_meses_cuadre.png)
 
 ## Tablas para cargar en _queries_
 
