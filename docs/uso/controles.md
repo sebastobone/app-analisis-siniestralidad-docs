@@ -31,7 +31,7 @@ En la pantalla verá dos casillas de verificación (_checkboxes_) para indicar s
 
 En la parte inferior, bajo los títulos **Archivos para incluir en controles y cuadre de siniestros, primas, y expuestos**, debe seleccionar qué archivos (ya sea de extracción o carga manual) se compararán contra SAP.
 
-El sistema calcula las diferencias a nivel de ramo-compañía y las reparte según las proporciones definidas en las hojas **Cuadre_Siniestros** y **Cuadre_Primas** del [archivo de segmentación](../config/segmentacion.md#aperturas-para-repartir-diferencias).
+El sistema calcula las diferencias a nivel de ramo-compañía y las reparte según las proporciones definidas en las hojas **Cuadre_Siniestros** y **Cuadre_Primas** del [archivo de segmentación](../config/segmentacion.md#aperturas-y-periodos-para-repartir-diferencias).
 
 !!! info
     Cada vez que extrae o carga un nuevo archivo de siniestros, primas, o expuestos, las listas de archivos disponibles se actualizan automáticamente.
