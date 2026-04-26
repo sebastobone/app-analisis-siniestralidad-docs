@@ -4,6 +4,21 @@
 
 # Versionamiento
 
+## 1.6.0 - 2026-04-24
+
+### 💥 Cambios disruptivos
+
+- Se introduce la columna **"apertura_redundante"** a las hojas **Apertura_Primas** y **Apertura_Expuestos** del archivo de segmentación. El propósito es excluir estas aperturas redundantes de la generación de controles, de forma que no se cuenten varias veces las mismas aperturas para la comparación contra SAP y las comparaciones de consistencia histórica.
+
+### ✨ Mejoras
+
+- Migrar análisis de movilidad 202511-202603.
+
+### 🐞 Correcciones
+
+- Evitar bloqueos al abrir Exceles con links desde el servidor.
+- Excluir RTIP de ejemplos de queries de primas.
+
 ## 1.5.0 - 2026-04-20
 
 ### 💥 Cambios disruptivos

@@ -34,9 +34,11 @@ En el archivo de segmentación, cree las siguientes hojas con sus respectivas ta
 
     Estas columnas son necesarias para realizar las comparaciones contra SAP.
 
-### Propiedades de cada apertura
+### Propiedades de las aperturas
 
-En **Apertura_Siniestros**, para cada apertura se debe definir:
+#### Aperturas de siniestros
+
+En la hoja **Apertura_Siniestros**, para cada apertura se debe definir:
 
 1. **Periodicidad de ocurrencia**: Granularidad del triángulo y del entremés. Valores disponibles:
 
@@ -63,12 +65,52 @@ En **Apertura_Siniestros**, para cada apertura se debe definir:
     - Anual (Nov - Oct)
     - Anual (Dic - Nov)
 
-2. **Tipo de indexación de la severidad**: Metodología de indexación que se utilizará para calcular la severidad. Puede tomar tres valores: Ninguna, Por fecha de ocurrencia, o Por fecha de movimiento
+2. **Tipo de indexación de la severidad**: Metodología de indexación que se utilizará para calcular la severidad. Puede tomar tres valores:
+
+    - Ninguna
+    - Por fecha de ocurrencia
+    - Por fecha de movimiento
 
 3. **Medida de indexación de la severidad**: Nombre del indicador a usar para la indexación (si aplica).
 
 !!! example "Ejemplo"
     ![Ejemplo aperturas](assets/ejemplo_aperturas.png)
+
+#### Aperturas de primas y expuestos
+
+En las hojas **Aperturas_Primas** y **Aperturas_Expuestos**, se debe incluir una columna adicional: **apertura_redundante** (VERDADERO / FALSO).
+
+Esta columna indica si una apertura **contiene información ya incluida en otras aperturas**.
+
+##### ¿Qué es una apertura redundante?
+
+Una apertura es redundante cuando su información puede obtenerse sumando otras aperturas.
+Esto es clave para evitar:
+
+- Doble conteo
+- Errores en controles
+- Diferencias artificiales frente a SAP o análisis históricos
+
+!!! example "Ejemplo"
+    Supongamos un análisis de autos con las siguientes aperturas:
+
+    - Cobertura: "RC" y "Daños"
+    - Tipo de negocio: "Individual", "Colectivo", "Financieras"
+
+    - Los siniestros se analizan por ambas dimensiones
+    - Las primas sólo por tipo de negocio  
+    - La cobertura RC se analiza de forma agregada ("Todos")  
+
+    La tabla en **Apertura_Primas** sería:
+
+    |codigo_op|codigo_ramo_op|tipo_negocio|apertura_redundante|
+    |-|-|-|-|
+    |01|040|Individual|FALSO|
+    |01|040|Colectivo|FALSO|
+    |01|040|Financieras|FALSO|
+    |01|040|Todos|VERDADERO|
+
+    La fila **RC - Todos** es redundante porque equivale a la suma de las demás aperturas.
 
 ## Parametrizar el cuadre contable
 
