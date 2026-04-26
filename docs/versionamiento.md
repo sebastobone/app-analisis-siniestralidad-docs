@@ -4,6 +4,22 @@
 
 # Versionamiento
 
+## 1.7.1 - 2026-04-25
+
+### ✨ Mejoras
+
+- Agregar link para ejemplos de archivos de segmentación en la interfaz web.
+
+### 🐞 Correcciones
+
+- Notificar finalización del proceso de **Traer y guardar varias aperturas** en las plantillas de Excel.
+- Corregir control de consistencia en la información que viaja a la plantilla para primas y expuestos.
+
+### 📦 Interno
+
+- Maximizar el uso de LazyFrames para optimizar los pipelines internos de la aplicación.
+- Eliminar dependencia de variables de entorno para obtener la URL de la API.
+
 ## 1.7.0 - 2026-04-24
 
 ### ✨ Mejoras
