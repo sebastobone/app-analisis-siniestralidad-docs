@@ -1,15 +1,30 @@
 <!--markdownlint-disable MD007-->
 
-# Consolidacion de informacion
+# Consolidación de información
 
-A continuación, se describe el proceso de consolidación de la información para ser utilizada en las plantillas de Excel.
+En esta etapa, el sistema **unifica y transforma los datos de entrada** para que puedan ser utilizados en las plantillas de Excel.
 
-- Si hizo cuadre contable, se usa:
+## ¿Qué información se utiliza?
 
-    - La información **post-cuadre**.
-    - Los archivos extraídos o cargados **no incluidos en el cuadre**.
+Depende de si realizó o no el cuadre contable:
 
-- Si no hizo cuadre, se usan **todos los archivos** de extracción o carga manual.
+- Si realizó cuadre contable:
+    - Se utiliza la información después del cuadre
+    - Se incluyen también los archivos que no participaron en el cuadre
+- Si no realizó cuadre contable:
+    - Se utilizan todos los archivos de extracción o carga manual
+
+## ¿Dónde ver los archivos utilizados?
+
+La lista de archivos de entrada se encuentra en:
+
+- Sección **"Resumen de información"**
+- Sub-sección **"Consolidado"**
+
+![Sección resumen de información](../../assets/resumen_informacion.png)
+
+!!! tip
+    Puede usar el botón **"Consolidar entradas"** para generar explícitamente los archivos finales. Sin embargo, esto **no es obligatorio**, ya que cualquier función dentro de la plantilla ejecuta automáticamente este proceso.
 
 ## Transformaciones adicionales
 

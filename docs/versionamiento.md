@@ -4,6 +4,13 @@
 
 # Versionamiento
 
+## 1.7.0 - 2026-04-24
+
+### ✨ Mejoras
+
+- Se implementa una función para crear una copia de una plantilla ya creada.
+- Se agrega una sección para visualizar las entradas finales de información en la interfaz web.
+
 ## 1.6.0 - 2026-04-24
 
 ### 💥 Cambios disruptivos
