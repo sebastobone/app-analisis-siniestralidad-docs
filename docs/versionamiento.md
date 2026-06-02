@@ -4,6 +4,28 @@
 
 # Versionamiento
 
+## 1.8.0 - 2026-05-31
+
+### ✨ Mejoras
+
+- Las tablas de metadatos ahora muestran el **número de registros** y los **totales** de las columnas clave (montos, siniestros, expuestos) para cada archivo almacenado. #79
+- Al cargar una plantilla desde Excel, el nombre del archivo se actualiza en la base de datos para reflejar el nombre con que fue guardada.
+- Los registros de log incluyen ahora el **análisis** y el **usuario** en cada entrada, tanto en archivos como en la interfaz web, para trazabilidad SOX. #80
+
+### 🐞 Correcciones
+
+- Las plantillas se identifican por un **UUID** en lugar de su ID de base de datos, para evitar que plantillas obsoletas sobrescriban datos de plantillas activas. #78
+- **Macros VBA:** Restaurar `ScreenUpdating` y `Calculation` al ocurrir errores en `GenerarHoja`, `CambiarApertura`, `GuardarEstimacionesTriangulos`, `TraerYGuardarEstimacionesTriangulos`, `TraerEstimacionTriangulos`, `PrepararPlantilla` y `GenerarEntremes` — antes Excel quedaba sin recalcular ni refrescar pantalla hasta reiniciar.
+- **Macros VBA:** Corregir acceso a la gráfica de factores por nombre en lugar de índice; corregir conversión columna-a-letra para columnas más allá de la Z; corregir concatenación de strings en fórmulas; corregir lógica de guardado para el indicador frecuencia/severidad; corregir variables no declaradas; corregir verificación de colección nula; corregir typo en parámetro `mesUltimosResultados` de `CrearConsolidadoTriangulos`.
+- Corregir formato de columnas en la tabla de controles (extensión y guiones bajos eliminados del texto visible).
+
+### 📦 Interno
+
+- Los módulos VBA de la plantilla se agregan al control de versiones en `src/vba/` y se crea el script `actualizar_vba.py` para sincronizarlos con `plantilla.xlsm`.
+- Se crea el script `db_backup.py` para generar copias de seguridad de la carpeta `data/`. #81
+- El log de producción pasa de retención de 10 días / rotación de 10 MB a **180 días / 500 MB**.
+- Optimizaciones en macros VBA: eliminar uso del portapapeles en `CrearTriangulo`, reemplazar `Copy/PasteSpecial` con `FillRight` en `PegarFormulasEstadisticos`, reemplazar `Application.Calculate` con `ws.Calculate` en `GuardarVectores`, y cachear `ObtenerNumeroColumna` por hoja.
+
 ## 1.7.1 - 2026-04-25
 
 ### ✨ Mejoras
