@@ -4,6 +4,21 @@
 
 # Versionamiento
 
+## 1.8.1 - 2026-07-20
+
+### 🐞 Correcciones
+
+- Limitar evidencias de consistencia histórica a los últimos 12 meses
+
+### 📦 Interno
+
+- Actualizar dependencias
+- Organizar scripts en carpeta propia
+
+### 📚 Documentación
+
+- Agregar guía para desarrolladores
+
 ## 1.8.0 - 2026-05-31
 
 ### ✨ Mejoras
