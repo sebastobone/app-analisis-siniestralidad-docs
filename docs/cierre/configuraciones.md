@@ -5,7 +5,7 @@
 
 Los [archivos de segmentación](https://github.com/sebastobone/app-analisis-siniestralidad/tree/main/data) y los [_queries_](https://github.com/sebastobone/app-analisis-siniestralidad/tree/main/data/queries) incluidos por defecto en el repositorio corresponden a la configuración utilizada por cada negocio para su proceso de cierre contable mensual.
 
-Estas configuraciones constituyen la **base estandarizada** de la aplicación y siempre están validadas según las [pruebas de funcionamiento](../pruebas.md).
+Estas configuraciones constituyen la **base estandarizada** de la aplicación y siempre están validadas según las [pruebas automatizadas](../desarrolladores/entorno.md#pruebas-automatizadas).
 
 ## Lógica de consultas
 
