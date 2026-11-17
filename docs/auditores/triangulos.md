@@ -31,6 +31,8 @@ Para cambiar de apertura, repita el proceso: seleccione la nueva apertura en los
 
 ![Exclusiones](../uso/assets/plantilla/exclusiones.png)
 
+Los factores de desarrollo menores a 1 aparecen resaltados en ámbar. Consulte la [guía de uso](../uso/plantilla/triangulos.md#ratios) para más detalle.
+
 #### Estadísticos de factores
 
 - Ventanas de tiempo para estadísticos
@@ -48,6 +50,7 @@ Para cambiar de apertura, repita el proceso: seleccione la nueva apertura en los
 - Ultimate por ocurrencia
 - Metodología por ocurrencia
 - Indicador por ocurrencia
+- PPR por ocurrencia (solo Plata)
 - Comentarios por ocurrencia
 
 ![Triángulo base](../uso/assets/plantilla/tabla_resumen.png)

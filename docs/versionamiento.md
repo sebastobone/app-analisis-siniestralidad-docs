@@ -4,6 +4,27 @@
 
 # Versionamiento
 
+## 1.9.0 - 2026-11-16
+
+### ✨ Mejoras
+
+- Nueva metodología **PPR** para cuantificar el ultimate en los triángulos de **Plata**: el ultimate se calcula como `expuestos * ppr`. La columna **ppr** pasa a ser modificable, con valor por defecto igual al ultimate Chain-Ladder dividido por los expuestos, y se conserva al guardar y traer las fórmulas de la plantilla.
+- El PPR se almacena en la hoja **Resumen** (`plata_ppr_bruto` y `plata_ppr_retenido`) y en los resultados. Las plantillas preparadas antes de este cambio se siguen guardando sin error, solo que sin el PPR.
+- Los factores de desarrollo **menores a 1** se resaltan con un relleno ámbar de alerta en el triángulo de **Ratios** y en la fila de **Factores Seleccionados**.
+
+### 🐞 Correcciones
+
+- **Macros VBA:** Al usar **Cambiar** en la hoja **Frecuencia**, el denominador de expuestos del triángulo de frecuencias ahora sigue la apertura seleccionada; antes solo cambiaba el numerador. Se corrige el mismo problema en el triángulo **Conteo Evolucionado** de la hoja **Severidad**. Requiere generar nuevamente la hoja en plantillas existentes.
+- Corregir la corrupción de tildes y eñes en las respuestas JSON hacia la plantilla en Windows, que se acumulaba en cada ciclo de traer y guardar. Se agrega el script `reparar_mojibake.py` para reparar fórmulas ya corrompidas.
+- Al concatenar resultados históricos se conservan las columnas nuevas aunque los archivos más antiguos no las tengan.
+- Desactivar `diagnose` de loguru para no exponer credenciales de Teradata en los tracebacks de los logs.
+
+### 📦 Interno
+
+- Actualizar dependencias (polars 2.1, fastapi 0.163, sqlmodel 0.0.50, entre otras), simplificar las dependencias del proyecto y corregir vulnerabilidades transitivas.
+- Eliminar la captura de pantalla de las evidencias de parámetros y la dependencia `mss`.
+- Agregar `HttpHelper.applescript` al control de versiones.
+
 ## 1.8.1 - 2026-07-20
 
 ### 🐞 Correcciones

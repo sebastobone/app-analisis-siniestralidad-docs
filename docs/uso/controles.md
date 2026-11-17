@@ -94,12 +94,6 @@ El sistema compara la información de [los archivos finales de siniestros, prima
 
 ### Evidencias de extracción
 
-El sistema guarda dos evidencias del momento de extracción:
+El sistema guarda como evidencia del momento de extracción **el archivo de segmentación utilizado**, con una hoja extra que incluye la fecha y hora de generación de controles.
 
-1. **El archivo de segmentación utilizado**, con una hoja extra que incluye la fecha y hora de generación de controles.
-
-    ![Hoja de Excel con fecha y hora.](assets/controles/evidencia_fecha_hora.png)
-
-2. **Un pantallazo** con la fecha y hora de generación de controles.
-
-    ![Pantallazo con fecha y hora.](assets/controles/pantallazo_reloj.png)
+![Hoja de Excel con fecha y hora.](assets/controles/evidencia_fecha_hora.png)

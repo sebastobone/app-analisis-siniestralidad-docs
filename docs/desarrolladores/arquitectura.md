@@ -70,7 +70,7 @@ graph TB
 - **Lógica de negocio**, organizada por dominio: `informacion/` (extracción Teradata, carga manual, almacenamiento), `controles_informacion/` (generación de controles, cuadre contable, SAP, evidencias), `metodos_plantilla/` (generar, preparar, resultados, guardar/traer, tablas resumen), `bases/` (bases de siniestros/primas/expuestos, completar diagonal con `chainladder`), `validation/` (entradas, queries, segmentación).
 - **Procesamiento de datos:** [Polars](https://pola.rs/), usando `LazyFrame` para optimizar los pipelines internos.
 - **Verificación de tipos:** [`zuban`](https://github.com/zubanls/zuban).
-- **Logging:** [Loguru](https://github.com/Delgan/loguru), configurado en `logger_config.py`.
+- **Logging:** [Loguru](https://github.com/Delgan/loguru), configurado en `logger_config.py`. La opción `diagnose` está desactivada para que los tracebacks no expongan valores de variables, como las credenciales de Teradata.
 - **Notificaciones en tiempo real:** *Server-Sent Events (SSE)*, soportado nativamente por FastAPI.
 
 ## Frontend
@@ -83,6 +83,12 @@ graph TB
 
 - Además del frontend web, las **macros VBA** de la plantilla de Excel actúan como un segundo cliente de la API: hacen peticiones HTTP directamente al backend (por ejemplo, para guardar o traer estimaciones), autenticadas con un token único por plantilla y usuario.
 - Este es el mecanismo de interacción en **tiempo de ejecución**, una vez el usuario ya tiene el archivo `.xlsm` — distinto de cómo se genera el archivo en primer lugar (ver [Plantillas de Excel](#plantillas-de-excel)).
+- **Windows:** las peticiones usan WinHttp. Las respuestas JSON se decodifican explícitamente como UTF-8, y el backend declara `charset=utf-8` en ellas mediante un middleware. Antes de la versión 1.9.0 se decodificaban como cp1252, lo que corrompía tildes y eñes en cada ciclo de traer y guardar. Las fórmulas ya corrompidas se reparan con `scripts/reparar_mojibake.py`, que por defecto solo reporta y con `--aplicar` sobrescribe los archivos.
+- **Mac:** las macros invocan el script `src/vba/HttpHelper.applescript` mediante `AppleScriptTask`, el cual hace las peticiones con `curl`. Excel solo puede ejecutar scripts ubicados en su carpeta de scripts, por lo que debe compilarse allí una vez:
+
+    ```bash
+    osacompile -o ~/Library/Application\ Scripts/com.microsoft.Excel/HttpHelper.scpt src/vba/HttpHelper.applescript
+    ```
 
 ## Almacenamiento
 

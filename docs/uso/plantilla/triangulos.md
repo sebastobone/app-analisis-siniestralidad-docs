@@ -34,9 +34,10 @@ Además, en los casos de Frecuencia, Severidad y Plata, también se guardan:
 
 - Tipo de metodología (pago o incurrido).
 - Vector de ultimate (valores y fórmulas).
-- Metodología por ocurrencia (Chain-Ladder, Bornhuetter-Ferguson o Indicador).
+- Metodología por ocurrencia (Chain-Ladder, Bornhuetter-Ferguson, Indicador o PPR).
 - Triángulo de factores de desarrollo (por si se decide modificar los factores de una o varias ocurrencias).
 - Vector de indicador (relevante solo para metodologías Bornhuetter-Ferguson e Indicador).
+- Vector de PPR (solo en Plata, relevante para la metodología PPR).
 - Columna de comentarios.
 
 En el caso de Severidad, si se usa una metodología de indexación se guarda también el triángulo del vector de indexación.
@@ -85,6 +86,9 @@ Muestran los pagos (azul) e incurridos (amarillo).
 ![Ratios.](../assets/plantilla/ratios.png)
 
 Aquí se calculan los **factores de desarrollo**, los cuales representan la tasa de evolución de la cifra de pago o incurrido entre una altura y la siguiente.
+
+!!! note "Factores menores a 1"
+    Los factores de desarrollo **menores a 1** se resaltan con **relleno ámbar y negrita**, tanto en este triángulo como en la fila **"factor seleccionado"** de los [estadísticos](#estadisticos). Indican que la cifra disminuyó de una altura a la siguiente, por lo que conviene revisarlos. Si un factor está excluido, conserva además la fuente roja de las [exclusiones](#exclusiones).
 
 #### Gráfica de factores
 
@@ -157,6 +161,9 @@ Esta tabla contiene el resultado final del análisis.
 |**Chain-Ladder** (por defecto) |Escriba "chain-ladder"         |Estima con factores de desarrollo                         |
 |**Indicador**                  |Escriba "indicador"            |Usa un valor esperado o un % sobre la prima devengada     |
 |**Bornhuetter-Ferguson**       |Escriba "bornhuetter-ferguson" |Pondera Chain-Ladder e Indicador según el % de desarrollo |
+|**PPR** (solo Plata)           |Escriba "ppr"                  |Multiplica los expuestos por una prima pura de riesgo     |
+
+En la hoja **Plata**, la columna **"ppr"** es paramétrica. Por defecto toma el ultimate Chain-Ladder dividido por los expuestos de la ocurrencia, y puede reemplazarse por el valor que el usuario considere adecuado. Cuando la metodología de una ocurrencia es "ppr", su ultimate se calcula como **expuestos × ppr**.
 
 La tabla incluye también columnas de apoyo (**"indicador chain-ladder"**, **"expuestos"**, etc.) y un espacio de **comentarios** para que el usuario registre los criterios, decisiones y justificaciones aplicadas en la estimación de cada ocurrencia.
 
@@ -181,6 +188,7 @@ Muestra una comparación de pago, incurrido, y ultimate para cada periodo de ocu
     - Ultimate por ocurrencia.
     - Metodología por ocurrencia.
     - Indicador por ocurrencia.
+    - PPR por ocurrencia (solo Plata).
     - Comentarios.
 
 2. Para analizar una nueva apertura:
