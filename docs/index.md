@@ -1,3 +1,3 @@
 # Introducción
 
-{% include-markdown "../README.md" start="<!--docs-intro-start-->" %}
+--8<-- "README.md:intro"

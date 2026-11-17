@@ -44,6 +44,7 @@ nav:
 
 theme:
   name: material
+  variant: classic
   palette:
     primary: custom
     accent: custom
@@ -55,9 +56,6 @@ theme:
 
 extra_css:
   - styles.css
-
-plugins:
-  - include-markdown
 
 markdown_extensions:
   - pymdownx.highlight:

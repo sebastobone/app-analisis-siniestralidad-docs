@@ -17,11 +17,11 @@ repos:
         always_run: true
         pass_filenames: false
 
-      - id: mkdocs-strict
-        name: mkdocs => strict internal link check
+      - id: zensical-strict
+        name: zensical => strict internal link check
         stages: [pre-push]
         language: system
-        entry: uv run mkdocs build --strict
+        entry: uv run zensical build --strict
         always_run: true
         pass_filenames: false
 
@@ -29,6 +29,6 @@ repos:
         name: pip-audit => vulnerability checking
         stages: [pre-push]
         language: system
-        entry: uv run pip-audit --ignore-vuln GHSA-c33w-24p9-8m24
+        entry: uv run pip-audit
         always_run: true
         pass_filenames: false

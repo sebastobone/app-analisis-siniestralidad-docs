@@ -2,7 +2,7 @@
 
 Click [aquí](https://sebastobone.github.io/app-analisis-siniestralidad-docs/) para acceder a la documentación completa en línea.
 
-<!--docs-intro-start-->
+<!-- --8<-- [start:intro] -->
 
 Esta aplicación permite realizar **análisis de siniestralidad última** mediante metodologías de triángulos y entremés.
 
@@ -28,3 +28,5 @@ Esta aplicación permite realizar **análisis de siniestralidad última** median
 2. Ingrese su usuario y contraseña. En caso de no tenerlos, contacte al administrador.
 
 ¡Eso es todo! Consulte ahora la [guía de configuración de análisis](https://sebastobone.github.io/app-analisis-siniestralidad-docs/config/segmentacion/) y la [guía de uso de la app](https://sebastobone.github.io/app-analisis-siniestralidad-docs/uso/ejecutar_app/).
+
+<!-- --8<-- [end:intro] -->
