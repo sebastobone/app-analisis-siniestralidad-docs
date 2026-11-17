@@ -1,0 +1,2055 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Gerencia de Modelacion Tecnica">
+      
+      
+        <link rel="canonical" href="https://sebastobone.github.io/app-analisis-siniestralidad-docs/1.9/desarrolladores/arquitectura/">
+      
+      
+      
+        <link rel="prev" href="../inicio/">
+      
+      
+        <link rel="next" href="../entorno/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.1.1">
+    
+    
+      
+        <title>Arquitectura - App Análisis Siniestralidad</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.0006804e.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/classic/palette.813d4b3f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Saltar a contenido
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="App Análisis Siniestralidad" class="md-header__button md-logo" aria-label="App Análisis Siniestralidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <span class="md-visually-hidden">Navegación</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            App Análisis Siniestralidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arquitectura
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <span class="md-visually-hidden">Buscar</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/sebastobone/app-analisis-siniestralidad" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="App Análisis Siniestralidad" class="md-nav__button md-logo" aria-label="App Análisis Siniestralidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    App Análisis Siniestralidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sebastobone/app-analisis-siniestralidad" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Introducción
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configuración
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Configuración
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/segmentacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archivo segmentación
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Construcción de queries
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Uso
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Uso
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/crear_analisis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Crear un análisis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generar información
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Generar información
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/informacion/extraccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Extracción
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/informacion/carga_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Carga manual
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/informacion/validaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Validaciones
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/controles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generar controles y cuadrar contablemente
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Plantillas
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Plantillas
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/plantilla/consolidacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Consolidación de información
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/plantilla/crear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Crear una plantilla
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/plantilla/estructura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estructura de la plantilla
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/plantilla/triangulos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Analizar triángulos
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/plantilla/entremes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Analizar entremés
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/plantilla/cargar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cargar resultados
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Consolidar resultados y generar informes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/archivos_adicionales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cargar archivos adicionales
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso/descargar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Descargar archivos
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diccionario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Diccionario
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cierres contables
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Cierres contables
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cierre/configuraciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configuraciones
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cierre/particularidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Particularidades por negocio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guía para auditores
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guía para auditores
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auditores/inicio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inicio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auditores/triangulos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Revisar triángulos
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auditores/entremes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Revisar entremés
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guía para desarrolladores
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guía para desarrolladores
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inicio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inicio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arquitectura
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arquitectura
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capas-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Capas de la aplicación
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Backend
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Frontend
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cliente-de-plantilla-excel-vba" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cliente de plantilla Excel (VBA)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Almacenamiento
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modelo de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantillas-de-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Plantillas de Excel
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integraciones-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Integraciones externas
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Autenticación y roles
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flujo de trabajo del usuario
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estructura del repositorio
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurar entorno y pruebas
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../despliegue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Despliegue
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contribución
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versionamiento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Versionamiento
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capas-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Capas de la aplicación
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Backend
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Frontend
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cliente-de-plantilla-excel-vba" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cliente de plantilla Excel (VBA)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Almacenamiento
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modelo de datos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantillas-de-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Plantillas de Excel
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integraciones-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Integraciones externas
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Autenticación y roles
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flujo de trabajo del usuario
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estructura del repositorio
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<!--markdownlint-disable MD007-->
+
+<h1 id="arquitectura">Arquitectura</h1>
+<p>Visión general del stack tecnológico y los componentes principales de la aplicación.</p>
+<h2 id="capas-de-la-aplicacion">Capas de la aplicación</h2>
+<pre class="mermaid"><code>graph TB
+    subgraph Frontend["Frontend (Jinja2 + Vanilla JS)"]
+        HTML["HTML Templates&lt;br/&gt;src/templates"]
+        JS["JavaScript Modules&lt;br/&gt;src/static"]
+    end
+
+    subgraph ExcelClient["Plantilla Excel (cliente)"]
+        VBA["Macros VBA&lt;br/&gt;src/vba"]
+    end
+
+    subgraph API["FastAPI — src/app.py"]
+        direction LR
+        R_AUTH["auth.py&lt;br/&gt;Login · JWT · sesión"]
+        R_ADMIN["admin.py&lt;br/&gt;CRUD usuarios · roles"]
+        R_MAESTRO["maestro_analisis.py&lt;br/&gt;Crear / listar análisis"]
+        R_ENT["entradas.py&lt;br/&gt;Subir datos / queries"]
+        R_CTRL["controles_informacion.py&lt;br/&gt;Generar controles"]
+        R_PLANT["metodos_plantilla.py&lt;br/&gt;Plantillas de Excel"]
+        R_COM["comunes.py&lt;br/&gt;Descargas · metadatos"]
+    end
+
+    subgraph Core["Lógica de negocio"]
+        direction LR
+        INFO["informacion/&lt;br/&gt;tera_connect · carga_manual&lt;br/&gt;almacenamiento · mocks"]
+        CTRL["controles_informacion/&lt;br/&gt;generacion · cuadre_contable&lt;br/&gt;sap · evidencias"]
+        MET["metodos_plantilla/&lt;br/&gt;generar (xlwings) · preparar&lt;br/&gt;resultados · guardar_traer · tablas_resumen"]
+        BASES["bases/&lt;br/&gt;base_siniestros&lt;br/&gt;base_primas_expuestos&lt;br/&gt;completar_diagonal (chainladder)"]
+        VAL["validation/&lt;br/&gt;entradas · queries&lt;br/&gt;segmentacion"]
+    end
+
+    subgraph Infra["Infraestructura"]
+        DB["db.py + models.py&lt;br/&gt;SQLite · SQLModel&lt;br/&gt;Usuario · Analisis · Metadata"]
+        CFG["configuracion.py&lt;br/&gt;.env.private"]
+        LOG["logger_config.py&lt;br/&gt;Loguru"]
+        UTILS["utils.py · constantes.py"]
+    end
+
+    subgraph Ext["Fuentes de datos externas"]
+        TERA["Teradata&lt;br/&gt;teradatasql"]
+        UPLOAD["Archivos del usuario&lt;br/&gt;(carga manual)"]
+    end
+
+    subgraph Storage["Almacenamiento local"]
+        SQLITE["data/database.db"]
+        PARQUET["data/{analisis_id}/&lt;br/&gt;*.parquet · *.xlsm"]
+    end
+
+    HTML &lt;--&gt; JS
+    JS &lt;--&gt;|"Fetch API"| API
+    VBA &lt;--&gt;|"HTTP directo"| API
+    API --&gt; Core
+    Core --&gt; Infra
+    Core &lt;--&gt; Ext
+    Infra &lt;--&gt; Storage</code></pre>
+<h2 id="backend">Backend</h2>
+<ul>
+<li><strong>Framework:</strong> <a href="https://fastapi.tiangolo.com/">FastAPI</a> (Python), punto de entrada <code>src/app.py</code>.</li>
+<li><strong>Routers:</strong> <code>auth.py</code> (login, JWT, sesión), <code>admin.py</code> (CRUD de usuarios y roles), <code>maestro_analisis.py</code> (crear/listar análisis), <code>entradas.py</code> (subir datos y queries), <code>controles_informacion.py</code> (generar controles), <code>metodos_plantilla.py</code> (plantillas de Excel), <code>comunes.py</code> (descargas y metadatos).</li>
+<li><strong>Lógica de negocio</strong>, organizada por dominio: <code>informacion/</code> (extracción Teradata, carga manual, almacenamiento), <code>controles_informacion/</code> (generación de controles, cuadre contable, SAP, evidencias), <code>metodos_plantilla/</code> (generar, preparar, resultados, guardar/traer, tablas resumen), <code>bases/</code> (bases de siniestros/primas/expuestos, completar diagonal con <code>chainladder</code>), <code>validation/</code> (entradas, queries, segmentación).</li>
+<li><strong>Procesamiento de datos:</strong> <a href="https://pola.rs/">Polars</a>, usando <code>LazyFrame</code> para optimizar los pipelines internos.</li>
+<li><strong>Verificación de tipos:</strong> <a href="https://github.com/zubanls/zuban"><code>zuban</code></a>.</li>
+<li><strong>Logging:</strong> <a href="https://github.com/Delgan/loguru">Loguru</a>, configurado en <code>logger_config.py</code>. La opción <code>diagnose</code> está desactivada para que los tracebacks no expongan valores de variables, como las credenciales de Teradata.</li>
+<li><strong>Notificaciones en tiempo real:</strong> <em>Server-Sent Events (SSE)</em>, soportado nativamente por FastAPI.</li>
+</ul>
+<h2 id="frontend">Frontend</h2>
+<ul>
+<li><strong>Renderizado del lado del servidor:</strong> plantillas <a href="https://jinja.palletsprojects.com/">Jinja2</a> en <code>src/templates</code>.</li>
+<li><strong>Interactividad:</strong> módulos de JavaScript "vanilla" (sin framework) en <code>src/static</code>, con verificación de tipos propia (ver changelog v1.2.0) que consumen la API vía <code>fetch</code>.</li>
+<li><code>construir_static.py</code> construye/empaqueta los archivos estáticos.</li>
+</ul>
+<h2 id="cliente-de-plantilla-excel-vba">Cliente de plantilla Excel (VBA)</h2>
+<ul>
+<li>Además del frontend web, las <strong>macros VBA</strong> de la plantilla de Excel actúan como un segundo cliente de la API: hacen peticiones HTTP directamente al backend (por ejemplo, para guardar o traer estimaciones), autenticadas con un token único por plantilla y usuario.</li>
+<li>Este es el mecanismo de interacción en <strong>tiempo de ejecución</strong>, una vez el usuario ya tiene el archivo <code>.xlsm</code> — distinto de cómo se genera el archivo en primer lugar (ver <a href="#plantillas-de-excel">Plantillas de Excel</a>).</li>
+<li><strong>Windows:</strong> las peticiones usan WinHttp. Las respuestas JSON se decodifican explícitamente como UTF-8, y el backend declara <code>charset=utf-8</code> en ellas mediante un middleware. Antes de la versión 1.9.0 se decodificaban como cp1252, lo que corrompía tildes y eñes en cada ciclo de traer y guardar. Las fórmulas ya corrompidas se reparan con <code>scripts/reparar_mojibake.py</code>, que por defecto solo reporta y con <code>--aplicar</code> sobrescribe los archivos.</li>
+<li>
+<p><strong>Mac:</strong> las macros invocan el script <code>src/vba/HttpHelper.applescript</code> mediante <code>AppleScriptTask</code>, el cual hace las peticiones con <code>curl</code>. Excel solo puede ejecutar scripts ubicados en su carpeta de scripts, por lo que debe compilarse allí una vez:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>osacompile<span class="w"> </span>-o<span class="w"> </span>~/Library/Application<span class="se">\ </span>Scripts/com.microsoft.Excel/HttpHelper.scpt<span class="w"> </span>src/vba/HttpHelper.applescript
+</span></code></pre></div>
+</li>
+</ul>
+<h2 id="almacenamiento">Almacenamiento</h2>
+<ul>
+<li><strong>Base de datos:</strong> SQLite (<code>data/database.db</code>), con <a href="https://sqlmodel.tiangolo.com/">SQLModel</a> como ORM. Tablas principales: <code>Usuario</code>, <code>Analisis</code>, <code>Metadata</code>.</li>
+<li><strong>Archivos por análisis:</strong> cada análisis tiene su propia carpeta <code>data/{analisis_id}/</code>, con archivos <code>.parquet</code> (datos procesados) y <code>.xlsm</code> (plantillas de Excel).</li>
+<li>Copias de seguridad de <code>data/</code> mediante el script <code>db_backup.py</code>.</li>
+</ul>
+<h3 id="modelo-de-datos">Modelo de datos</h3>
+<pre class="mermaid"><code>erDiagram
+    Usuario {
+        int id PK
+        str nombre_usuario
+        str contrasena_hash
+        str rol "admin | actuario | auditor"
+        str[] negocios
+        bool activo
+        datetime fecha_hora_creacion
+        datetime fecha_hora_actualizacion
+        int usuario_creador
+        int usuario_actualizador
+        datetime fecha_hora_ultimo_ingreso
+    }
+
+    Analisis {
+        int id PK
+        str nombre
+        str negocio
+        str tipo_analisis "triangulos | entremes"
+        date mes_inicio
+        date mes_corte
+        bool cierre_contable
+        str[] aperturas_siniestros
+        str[] aperturas_primas
+        str[] aperturas_expuestos
+        int usuario_creador FK
+        int usuario_actualizador FK
+        datetime fecha_hora_creacion
+        datetime fecha_hora_actualizacion
+    }
+
+    Metadata {
+        int id PK
+        str ruta_archivo
+        str nombre_original
+        str tipo_archivo "entrada | query | segmentacion | plantilla | output | reporte"
+        str origen "extraccion_db | carga_manual | generado_sistema"
+        str etapa_proceso "crudo | pre_cuadre | post_cuadre | consolidacion | analisis"
+        str tipo_entrada "siniestros | primas | expuestos "
+        str tipo_control
+        bool plantilla_cargada
+        int analisis_id FK
+        int[] archivos_padres
+        int numero_filas
+        datetime fecha_hora_creacion
+        datetime fecha_hora_actualizacion
+        int usuario_creador FK
+        int usuario_actualizador FK
+    }
+
+    Usuario ||--o{ Analisis : "crea / actualiza"
+    Analisis ||--o{ Metadata : "tiene"</code></pre>
+<h2 id="plantillas-de-excel">Plantillas de Excel</h2>
+<p>Las estimaciones (triángulos y entremés) se realizan en plantillas de Excel con macros <strong>VBA</strong>. El backend y la plantilla interactúan en dos momentos distintos:</p>
+<ul>
+<li><strong>Descarga del archivo:</strong> al descargar una plantilla, <code>routers/comunes</code> usa <a href="https://www.xlwings.org/"><code>xlwings</code></a> para incrustar el token autenticador en el archivo. Esta es la razón por la que el servidor de producción <a href="../despliegue/#servidor">corre sobre una máquina Windows con Excel instalado</a>.</li>
+<li><strong>Interacción en tiempo de ejecución:</strong> una vez el usuario tiene el <code>.xlsm</code>, el backend deja de intervenir vía <code>xlwings</code> — son las <a href="#cliente-de-plantilla-excel-vba">macros VBA las que llaman a la API directamente por HTTP</a>.</li>
+</ul>
+<p>Los módulos VBA están versionados en <code>src/vba/</code> y se sincronizan con <code>plantilla.xlsm</code> mediante el script <code>actualizar_vba.py</code>.</p>
+<h2 id="integraciones-externas">Integraciones externas</h2>
+<ul>
+<li><strong>Teradata:</strong> fuente de los datos de siniestros, primas y expuestos, vía el driver <a href="https://pypi.org/project/teradatasql/"><code>teradatasql</code></a>. Las credenciales se configuran desde la interfaz web (no desde variables de entorno), salvo para <a href="../entorno/#configurar-variables-de-entorno">ejecutar pruebas localmente</a>.</li>
+</ul>
+<h2 id="autenticacion-y-roles">Autenticación y roles</h2>
+<ul>
+<li>Acceso mediante usuario y contraseña; la sesión se maneja con un <strong>JWT en cookie</strong> (<code>src/routers/auth.py</code>).</li>
+<li>Roles definidos en el modelo <code>Usuario</code>: <strong>admin</strong> (gestión de usuarios y accesos), <strong>actuario</strong> (usuario de negocio, crea y opera análisis) y <strong>auditor</strong> (solo lectura, ver la <a href="../../auditores/inicio/">guía para auditores</a>).</li>
+<li>Cada usuario tiene además una lista de <code>negocios</code> a los que tiene acceso.</li>
+</ul>
+<h2 id="flujo-de-trabajo-del-usuario">Flujo de trabajo del usuario</h2>
+<pre class="mermaid"><code>flowchart TD
+    A([Inicio]) --&gt; B["1 · Login&lt;/br&gt;src/routers/auth.py → JWT cookie"]
+    B --&gt; C["2 · Crear análisis&lt;/br&gt;src/routers/maestro_analisis.py → Analisis en BD → segmentacion.xlsx"]
+    C --&gt; D{Origen de datos}
+
+    D --&gt;|Teradata| E["3a · Subir y correr queries SQL&lt;/br&gt;src/routers/entradas.py → data/.../queries/"]
+    D --&gt;|Manual| F["3b · Subir Excel/csv/txt/parquet&lt;/br&gt;src/routers/entradas.py → data/.../carga_manual"]
+
+    E --&gt; G["4 · Generar controles · Cuadre contable · Carga AFOs&lt;/br&gt;src/routers/controles_informacion.py&lt;/br&gt;→ cuadre_contable&lt;/br&gt;→ validación SAP&lt;/br&gt;→ reportes Excel"]
+    F --&gt; G
+
+    G --&gt; H["5 · Plantillas Excel&lt;/br&gt;src/routers/metodos_plantilla.py → Crear / abrir plantilla → Preparar plantilla → Generar plantilla → Guardar aperturas → Cargar plantillas"]
+
+    H --&gt; I["6 · Consolidar resultados · Descargar informe Actuario Responsable"]
+
+    I --&gt; J([Descargar análisis])</code></pre>
+<h2 id="estructura-del-repositorio">Estructura del repositorio</h2>
+<pre class="mermaid"><code>graph LR
+    subgraph Inicio
+        APP[app.py]
+        CST[construir_static.py]
+    end
+
+    subgraph Routers
+        RA[auth.py]
+        RAD[admin.py]
+        RCOM[comunes.py]
+        RE[entradas.py]
+        RC[controles_informacion.py]
+        RM[metodos_plantilla.py]
+        RMAN[maestro_analisis.py]
+    end
+
+    subgraph Frontend
+        ST[static/]
+        TEM[templates/]
+    end
+
+    subgraph informacion
+        TC[tera_connect.py]
+        CM[carga_manual.py]
+    end
+
+    subgraph controles_informacion
+        GEN[generacion.py]
+        SAP[sap.py]
+        CC[cuadre_contable.py]
+        BP[bases_plantilla.py]
+    end
+
+    subgraph metodos_plantilla
+        GE[generar/]
+        PR[preparar.py]
+        GT[guardar_traer.py]
+        BA[bases/]
+        CD[completar_diagonal/]
+        RES[resultados.py]
+    end
+
+    subgraph transversales
+        AL[almacenamiento.py]
+        UTL[utils.py]
+        MDL[models.py]
+        CNS[constantes.py]
+    end
+
+    subgraph validaciones
+        VENT[entradas.py]
+        VQUE[queries.py]
+        VSEG[segmentacion.py]
+    end
+
+    APP --&gt; RC &amp; RM &amp; RE &amp; RA &amp; RAD &amp; RCOM &amp; RMAN
+    RE --&gt; TC &amp; CM
+    TC &amp; CM --&gt; AL
+    RC --&gt; GEN
+    GEN --&gt; SAP &amp; CC &amp; BP &amp; AL
+    RM --&gt; GE &amp; PR &amp; GT &amp; RES
+    GE --&gt; BA
+    PR --&gt; BA
+    GE --&gt; CD
+    TC --&gt; VENT &amp; VQUE
+    CM --&gt; VENT
+    GT --&gt; AL
+    RES --&gt; AL
+    RMAN --&gt; VSEG
+    APP --&gt; ST &amp; TEM
+    CST --&gt; ST &amp; TEM</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.copy","content.code.select","content.tabs.link"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":{"provider":"mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3cb411a8.min.js"></script>
+      
+    
+  </body>
+</html>
